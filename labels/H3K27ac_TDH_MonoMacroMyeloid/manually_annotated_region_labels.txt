@@ -1,0 +1,68 @@
+chr11:2,396,858-2,400,161 peakStart macrophage
+chr11:2,401,992-2,405,601 peakEnd macrophage
+chr11:2,409,347-2,418,718 noPeaks
+chr11:2,419,309-2,421,212 peakStart macrophage monocyte myeloid
+chr11:2,422,226-2,423,480 peakEnd macrophage monocyte myeloid
+
+chr11:6,150,807-6,156,891 peakEnd monocyte myeloid
+chr11:6,157,586-6,164,228 noPeaks
+
+chr11:6,220,310-6,222,274 peakStart monocyte myeloid 
+chr11:6,223,493-6,228,326 peakEnd monocyte myeloid
+chr11:6,230,828-6,252,698 noPeaks
+chr11:6,255,261-6,257,219 peaks monocyte myeloid macrophage
+
+chr12:7,124,087-7,125,700 peakStart monocyte myeloid macrophage
+chr12:7,125,722-7,127,083 peakEnd monocyte myeloid macrophage
+chr12:7,129,391-7,141,826 noPeaks 
+chr12:7,143,245-7,144,008 peakStart myeloid
+chr12:7,144,318-7,145,896 peakEnd myeloid
+
+chr12:14,516,774-14,518,715 peakStart monocyte myeloid macrophage
+chr12:14,518,806-14,521,417 peakEnd monocyte myeloid macrophage
+chr12:14,616,293-14,704,252 noPeaks
+chr12:14,719,313-14,720,623 peakStart monocyte macrophage
+chr12:14,720,624-14,722,138 peakEnd monocyte macrophage
+
+chr12:15,696,769-15,699,596 peakStart monocyte myeloid macrophage
+chr12:15,699,642-15,701,630 peakEnd monocyte myeloid macrophage
+chr12:15,727,004-15,751,570 noPeaks
+chr12:15,753,219-15,754,845 peakStart macrophage
+chr12:15,759,356-15,760,118 peakEnd macrophage
+
+chr1:22,777,427-22,778,640 peakStart monocyte myeloid macrophage
+chr1:22,778,650-22,779,592 peakEnd monocyte myeloid macrophage
+chr1:22,788,455-22,967,150 noPeaks
+chr1:22,970,988-22,972,805 peakStart macrophage
+chr1:22,973,321-22,975,423 peakEnd macrophage
+
+chr1:23,669,521-23,670,759 peakStart monocyte myeloid macrophage
+chr1:23,671,133-23,672,456 peakEnd monocyte myeloid macrophage
+chr1:23,671,133-23,672,456 noPeaks
+chr1:23,693,834-23,694,705 peakStart monocyte myeloid macrophage
+chr1:23,695,221-23,696,944 peakEnd monocyte myeloid macrophage
+
+chr1:28,968,306-28,969,339 peakStart monocyte myeloid macrophage
+chr1:28,970,132-28,971,525 peakEnd monocyte myeloid macrophage
+chr1:28,977,833-28,993,346 noPeaks
+chr1:28,993,947-28,995,809 peakStart monocyte myeloid macrophage
+chr1:28,995,900-28,997,782 peakEnd monocyte myeloid macrophage
+
+chr2:28,971,768-28,975,050 peakStart monocyte myeloid macrophage
+chr2:28,975,259-28,977,038 peakEnd monocyte myeloid macrophage
+chr2:28,981,231-29,089,907 noPeaks
+chr2:29,121,548-29,170,556 noPeaks
+chr2:29,172,237-29,175,538 peakStart monocyte myeloid
+chr2:29,175,749-29,178,021 peakEnd monocyte myeloid
+
+chr2:32,580,545-32,582,553 peakStart monocyte myeloid macrophage
+chr2:32,582,639-32,584,024 peakEnd monocyte myeloid macrophage
+chr2:32,585,868-32,605,958 noPeaks
+chr2:32,625,192-32,627,755 peakStart macrophage
+chr2:32,627,760-32,630,226 peakEnd macrophage
+
+chr2:33,700,504-33,701,270 peakStart monocyte myeloid macrophage
+chr2:33,701,296-33,703,688 peakEnd monocyte myeloid macrophage
+chr2:33,707,589-33,718,661 noPeaks 
+chr2:33,718,886-33,722,371 peakStart myeloid 
+chr2:33,722,798-33,730,454 peakEnd myeloid

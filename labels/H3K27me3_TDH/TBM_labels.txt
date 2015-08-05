@@ -1,0 +1,65 @@
+chr10:73,639,336-73,698,397 noPeaks
+chr10:73,724,758-73,729,341 peakEnd monocyte bcell tcell
+chr10:73,741,479-73,840,139 noPeaks
+chr10:73,843,584-73,848,062 peakStart monocyte
+chr10:73,848,151-73,851,233 peakEnd monocyte
+chr10:73,853,732-73,879,235 noPeaks
+
+chr10:77,154,679-77,168,611 peaks monocyte bcell tcell
+chr10:77,206,743-77,513,688 noPeaks
+
+chr10:83,313,686-83,613,562 noPeaks
+chr10:83,628,438-83,634,547 peakStart monocyte bcell tcell
+chr10:83,636,279-83,643,256 peakEnd monocyte bcell tcell
+chr10:83,652,794-83,739,840 noPeaks
+
+chr10:94,644,938-94,810,080 noPeaks
+chr10:94,811,736-94,833,497 peakStart monocyte bcell tcell
+chr10:94,834,225-94,845,090 peakEnd monocyte bcell tcell
+chr10:94,877,124-94,995,011 noPeaks
+
+chr10:98,209,494-98,262,370 noPeaks
+chr10:98,303,695-98,543,377 noPeaks
+chr10:98,560,918-98,561,517 peakStart monocyte bcell tcell
+chr10:98,561,533-98,561,852 peakEnd monocyte bcell tcell
+chr10:98,563,356-98,577,692 noPeaks
+
+chr10:103,144,300-103,301,734 noPeaks
+chr10:103,318,296-103,327,286 peakStart monocyte bcell tcell
+chr10:103,329,127-103,333,761 peakEnd monocyte bcell tcell
+chr10:103,372,500-103,457,328 noPeaks
+
+chr10:104,857,875-104,945,608 noPeaks
+chr10:105,012,236-105,037,965 peakStart monocyte bcell tcell
+chr10:105,038,223-105,052,727 peakEnd monocyte bcell tcell
+chr10:105,077,012-105,240,750 noPeaks
+chr10:105,248,865-105,254,379 peakStart monocyte bcell tcell
+chr10:105,254,721-105,263,603 peakEnd monocyte bcell tcell
+chr10:105,359,957-105,426,287 noPeaks
+chr10:105,445,696-105,452,785 peakStart monocyte
+chr10:105,452,825-105,456,240 peakEnd monocyte
+chr10:105,468,787-105,597,824 noPeaks
+
+chr10:106,125,312-106,274,566 noPeaks
+chr10:106,314,961-106,330,695 peakStart tcell
+chr10:106,331,236-106,343,216 peakEnd tcell
+chr10:106,343,573-106,385,566 noPeaks
+chr10:106,395,087-106,400,682 peakStart monocyte bcell
+chr10:106,401,685-106,413,483 peakEnd monocyte bcell
+chr10:106,413,500-106,466,060 noPeaks
+
+chr10:124,908,908-124,918,547 peakEnd monocyte bcell tcell
+chr10:124,920,008-124,960,940 noPeaks
+
+chr10:127,486,049-127,551,671 noPeaks
+chr10:127,572,295-127,577,694 peakStart monocyte bcell tcell
+chr10:127,802,777-128,058,352 noPeaks
+
+chr11:122,820,585-122,853,007 peakStart monocyte bcell tcell
+chr11:122,854,597-122,893,049 peakEnd monocyte bcell tcell
+chr11:122,893,120-123,041,315 noPeaks
+chr11:123,085,626-123,169,727 noPeaks
+chr11:123,225,119-123,229,552 peakStart monocyte
+chr11:123,229,835-123,237,495 peakEnd monocyte
+chr11:123,238,880-123,271,184 noPeaks
+

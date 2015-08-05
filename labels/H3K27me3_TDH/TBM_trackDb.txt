@@ -1,0 +1,220 @@
+track ac3-i3-h2238
+compositeTrack on
+shortLabel Histone - Blueprint
+longLabel Histone Modifications - Blueprint
+subGroup1 sampleType Sample_Type CD14positiveCD16negativeclassicalmonocyte=CD14-positive,_CD16-negative_classical_monocyte CD4positivealphabetaTcell=CD4-positive,_alpha-beta_T_cell CD38negativenaiveBcell=CD38-negative_naive_B_cell
+subGroup2 assayType Assay_Type H3K27me3=H3K27me3
+subGroup3 view View peaks=Peaks signal=Signal signal_forward=Signal_Forward signal_reverse=Signal_Reverse profile=Profile
+dimensions dimensionX=assayType dimensionY=sampleType dimA=view
+sortOrder assayType=+ sampleType=+
+dividers assayType
+dragAndDrop subTracks  
+priority 1
+type bed 5
+visibility pack
+color 40,175,220
+
+    track bpHistoneModsC000S5H2H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C000S5.K27me3.wig.mono
+    longLabel C000S5 H3K27me3 MACS2_wiggler CD14-positive, CD16-negative classical monocyte signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C000S5/CD14-positive_CD16-negative_classical_monocyte/ChIP-Seq/NCMLS/C000S5H2.H3K27me3.wiggler.20141014.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD14positiveCD16negativeclassicalmonocyte assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000027.1 DONOR_AGE=65_-_70 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS150369 CELL_TYPE=CD14-positive,_CD16-negative_classical_monocyte BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002057;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX547983 DONOR_ID=C000S5 DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC0010KH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C0010K.K27me3.wig.mono
+    longLabel C0010K H3K27me3 MACS2_wiggler CD14-positive, CD16-negative classical monocyte signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C0010K/CD14-positive_CD16-negative_classical_monocyte/ChIP-Seq/NCMLS/C0010KH1.H3K27me3.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD14positiveCD16negativeclassicalmonocyte assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000096.1 DONOR_AGE=60_-_65 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS150390 CELL_TYPE=CD14-positive,_CD16-negative_classical_monocyte BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002057;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX197191 DONOR_ID=C0010K DONOR_SEX=Female DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC0011IH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C0011I.K27me3.wig.mono
+    longLabel C0011I H3K27me3 MACS2_wiggler CD14-positive, CD16-negative classical monocyte signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C0011I/CD14-positive_CD16-negative_classical_monocyte/ChIP-Seq/NCMLS/C0011IH1.H3K27me3.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD14positiveCD16negativeclassicalmonocyte assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000097.1 DONOR_AGE=50_-_55 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS150388 CELL_TYPE=CD14-positive,_CD16-negative_classical_monocyte BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002057;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX197179 DONOR_ID=C0011I DONOR_SEX=Female DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC001UYH2H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C001UY.K27me3.wig.mono
+    longLabel C001UY H3K27me3 MACS2_wiggler CD14-positive, CD16-negative classical monocyte signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C001UY/CD14-positive_CD16-negative_classical_monocyte/ChIP-Seq/NCMLS/C001UYH2.H3K27me3.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD14positiveCD16negativeclassicalmonocyte assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000189.1 DONOR_AGE=60_-_65 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS150413 CELL_TYPE=CD14-positive,_CD16-negative_classical_monocyte BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002057;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX197204 DONOR_ID=C001UY DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC00264H1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C00264.K27me3.wig.mono
+    longLabel C00264 H3K27me3 MACS2_wiggler CD14-positive, CD16-negative classical monocyte signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/C00264/CD14-positive_CD16-negative_classical_monocyte/ChIP-Seq/NCMLS/C00264H1.H3K27me3.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD14positiveCD16negativeclassicalmonocyte assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000135.1 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS158623 CELL_TYPE=CD14-positive,_CD16-negative_classical_monocyte BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002057;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX190921 DONOR_ID=C00264 DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC002Q1H1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C002Q1.K27me3.wig.CD4+
+    longLabel C002Q1 H3K27me3 MACS2_wiggler CD4-positive, alpha-beta T cell signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C002Q1/CD4-positive_alpha-beta_T_cell/ChIP-Seq/NCMLS/C002Q1H1.H3K27me3.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD4positivealphabetaTcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000009.1 DONOR_AGE=50_-_55 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS164472 CELL_TYPE=CD4-positive,_alpha-beta_T_cell BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000624;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX197209 DONOR_ID=C002Q1 DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC002TWH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C002TW.K27me3.wig.CD4+
+    longLabel C002TW H3K27me3 MACS2_wiggler CD4-positive, alpha-beta T cell signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C002TW/CD4-positive_alpha-beta_T_cell/ChIP-Seq/NCMLS/C002TWH1.H3K27me3.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD4positivealphabetaTcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000075.1 DONOR_AGE=45_-_50 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS164473 CELL_TYPE=CD4-positive,_alpha-beta_T_cell BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000624;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX197214 DONOR_ID=C002TW DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC004SQH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C004SQ.K27me3.wig.mono
+    longLabel C004SQ H3K27me3 MACS2_wiggler CD14-positive, CD16-negative classical monocyte signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C004SQ/CD14-positive_CD16-negative_classical_monocyte/ChIP-Seq/NCMLS/C004SQH1.H3K27me3.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD14positiveCD16negativeclassicalmonocyte assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000101.1 DONOR_AGE=60_-_65 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS202663 CELL_TYPE=CD14-positive,_CD16-negative_classical_monocyte BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002057;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX190923 DONOR_ID=C004SQ DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC005PSH2H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C005PS.K27me3.wig.mono
+    longLabel C005PS H3K27me3 MACS2_wiggler CD14-positive, CD16-negative classical monocyte signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/C005PS/CD14-positive_CD16-negative_classical_monocyte/ChIP-Seq/NCMLS/C005PSH2.H3K27me3.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD14positiveCD16negativeclassicalmonocyte assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000155.1 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS206567 CELL_TYPE=CD14-positive,_CD16-negative_classical_monocyte BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002057;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX207021 DONOR_ID=C005PS DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC005QQH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel C005QQ.K27me3.wig.B
+    longLabel C005QQ H3K27me3 MACS2_wiggler CD38-negative naive B cell signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/C005QQ/CD38-negative_naive_B_cell/ChIP-Seq/NCMLS/C005QQH1.H3K27me3.wiggler.20131031.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD38negativenaiveBcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000165.1 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS206573 CELL_TYPE=CD38-negative_naive_B_cell BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002102;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX329606 DONOR_ID=C005QQ DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS000RDH2H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel S000RD.K27me3.wig.mono
+    longLabel S000RD H3K27me3 MACS2_wiggler CD14-positive, CD16-negative classical monocyte signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/S000RD/CD14-positive_CD16-negative_classical_monocyte/ChIP-Seq/NCMLS/S000RDH2.H3K27me3.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD14positiveCD16negativeclassicalmonocyte assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000048.1 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS208290 CELL_TYPE=CD14-positive,_CD16-negative_classical_monocyte BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002057;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX223449 DONOR_ID=S000RD DONOR_SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS0018AH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel S0018A.K27me3.wig.CD4+
+    longLabel S0018A H3K27me3 MACS2_wiggler CD4-positive, alpha-beta T cell signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/S0018A/CD4-positive_alpha-beta_T_cell/ChIP-Seq/NCMLS/S0018AH1.H3K27me3.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD4positivealphabetaTcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000191.1 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS214725 CELL_TYPE=CD4-positive,_alpha-beta_T_cell BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000624;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX300665 DONOR_ID=S0018A DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS0040EH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel S0040E.K27me3.wig.B
+    longLabel S0040E H3K27me3 MACS2_wiggler CD38-negative naive B cell signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/S0040E/CD38-negative_naive_B_cell/ChIP-Seq/NCMLS/S0040EH1.H3K27me3.wiggler.20141014.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD38negativenaiveBcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000005.1 DONOR_AGE=45_-_50 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS257189 CELL_TYPE=CD38-negative_naive_B_cell BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0002102;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX550664 DONOR_ID=S0040E DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS007DDH2H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel S007DD.K27me3.wig.CD4+
+    longLabel S007DD H3K27me3 MACS2_wiggler CD4-positive, alpha-beta T cell signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/S007DD/CD4-positive_alpha-beta_T_cell/ChIP-Seq/NCMLS/S007DDH2.H3K27me3.wiggler.20140106.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD4positivealphabetaTcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000147.1 DONOR_AGE=50_-_55 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS257432 CELL_TYPE=CD4-positive,_alpha-beta_T_cell BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000624;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX337010 DONOR_ID=S007DD DONOR_SEX=Female DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS007G7H4H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel S007G7.K27me3.wig.CD4+
+    longLabel S007G7 H3K27me3 MACS2_wiggler CD4-positive, alpha-beta T cell signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/S007G7/CD4-positive_alpha-beta_T_cell/ChIP-Seq/NCMLS/S007G7H4.H3K27me3.wiggler.20141014.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD4positivealphabetaTcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000093.1 DONOR_AGE=60_-_65 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS257461 CELL_TYPE=CD4-positive,_alpha-beta_T_cell BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000624;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX604484 DONOR_ID=S007G7 DONOR_SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS008H1H1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel S008H1.K27me3.wig.CD4+
+    longLabel S008H1 H3K27me3 MACS2_wiggler CD4-positive, alpha-beta T cell signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/S008H1/CD4-positive_alpha-beta_T_cell/ChIP-Seq/NCMLS/S008H1H1.H3K27me3.wiggler.20140106.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD4positivealphabetaTcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000160.1 DONOR_AGE=50_-_55 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS337154 CELL_TYPE=CD4-positive,_alpha-beta_T_cell BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000624;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX337053 DONOR_ID=S008H1 DONOR_SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS009W4H1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2238 on
+    shortLabel S009W4.K27me3.wig.CD4+
+    longLabel S009W4 H3K27me3 MACS2_wiggler CD4-positive, alpha-beta T cell signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/S009W4/CD4-positive_alpha-beta_T_cell/ChIP-Seq/NCMLS/S009W4H1.H3K27me3.wiggler.20140106.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=CD4positivealphabetaTcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000194.1 DONOR_AGE=45_-_50 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS337160 CELL_TYPE=CD4-positive,_alpha-beta_T_cell BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000624;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX337028 DONOR_ID=S009W4 DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+

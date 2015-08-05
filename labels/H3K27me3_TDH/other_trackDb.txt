@@ -1,0 +1,172 @@
+track ac3-i3-h2239
+compositeTrack on
+shortLabel Histone - Blueprint
+longLabel Histone Modifications - Blueprint
+subGroup1 sampleType Sample_Type SporadicBurkittlymphoma=Sporadic_Burkitt_lymphoma Mantlecelllymphoma=Mantle_cell_lymphoma Myeloidcell=Myeloid_cell
+subGroup2 assayType Assay_Type H3K27me3=H3K27me3
+subGroup3 view View peaks=Peaks signal=Signal signal_forward=Signal_Forward signal_reverse=Signal_Reverse profile=Profile
+dimensions dimensionX=assayType dimensionY=sampleType dimA=view
+sortOrder assayType=+ sampleType=+
+dividers assayType
+dragAndDrop subTracks  
+priority 1
+type bed 5
+visibility pack
+color 40,175,220
+
+    track bpHistoneModsBL-2_c01H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel BL-2.K27me3.wig.SBL
+    longLabel BL-2 H3K27me3 MACS2_wiggler Sporadic Burkitt lymphoma signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cell_Line/BL-2/Sporadic_Burkitt_lymphoma/ChIP-Seq/NCMLS/BP_BL-2_c01.H3K27me3.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=SporadicBurkittlymphoma assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000018.1 DISEASE=Sporadic_Burkitt_lymphoma ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS333897 BIOMATERIAL_TYPE=Cell_Line DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1336077 SAMPLE_ONTOLOGY_URI=http://www.ebi.ac.uk/efo/EFO_0005475 EXPERIMENT_ID=ERX297420 SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsDG-75_c01H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel DG-75.K27me3.wig.SBL
+    longLabel DG-75 H3K27me3 MACS2_wiggler Sporadic Burkitt lymphoma signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cell_Line/DG-75/Sporadic_Burkitt_lymphoma/ChIP-Seq/NCMLS/BP_DG-75_c01.H3K27me3.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=SporadicBurkittlymphoma assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000183.1 DISEASE=Sporadic_Burkitt_lymphoma ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS333899 BIOMATERIAL_TYPE=Cell_Line DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1336077 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CLO_0002767 EXPERIMENT_ID=ERX297422 SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsJVM-2_c01H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel JVM-2.K27me3.wig.MCL
+    longLabel JVM-2 H3K27me3 MACS2_wiggler Mantle cell lymphoma signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cell_Line/JVM-2/Mantle_cell_lymphoma/ChIP-Seq/NCMLS/BP_JVM-2_c01.H3K27me3.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Mantlecelllymphoma assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000143.1 DISEASE=Mantle_cell_lymphoma ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS333895 BIOMATERIAL_TYPE=Cell_Line DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0334634 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CLO_0007047 EXPERIMENT_ID=ERX297429 SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS005CNH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel pz 283.K27me3.wig.AML-CTR
+    longLabel pz 283 H3K27me3 MACS2_wiggler Acute myeloid leukemia - CTR signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Bone_marrow/pz_283/Acute_myeloid_leukemia_-_CTR/ChIP-Seq/NCMLS/S005CNH1.H3K27me3.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Myeloidcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 EPIRR_ID=IHECRE00000175.1 DISEASE=Acute_myeloid_leukemia CELL_TYPE=Myeloid_cell DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0023467 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000763 DONOR_ID=pz_283 ALIGNMENT_SOFTWARE=BWA DONOR_HEALTH_STATUS=Leukemia DONOR_AGE=65_-_70 MOLECULE=genomic_DNA ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS255946 BIOMATERIAL_TYPE=Primary_Cell EXPERIMENT_ID=ERX300649 DONOR_SEX=Male DONOR_ETHNICITY=Caucasian
+
+    track bpHistoneModsS005DLH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel pz 283.K27me3.wig.AML_SAHA
+    longLabel pz 283 H3K27me3 MACS2_wiggler Acute myeloid leukemia - SAHA signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Bone_marrow/pz_283/Acute_myeloid_leukemia_-_SAHA/ChIP-Seq/NCMLS/S005DLH1.H3K27me3.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Myeloidcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 EPIRR_ID=IHECRE00000031.1 DISEASE=Acute_myeloid_leukemia CELL_TYPE=Myeloid_cell DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0023467 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000763 DONOR_ID=pz_283 ALIGNMENT_SOFTWARE=BWA DONOR_HEALTH_STATUS=Leukemia DONOR_AGE=65_-_70 MOLECULE=genomic_DNA ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS255945 BIOMATERIAL_TYPE=Primary_Cell EXPERIMENT_ID=ERX300675 DONOR_SEX=Male DONOR_ETHNICITY=Caucasian
+
+    track bpHistoneModsS005EJH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel UMCG 2012-094.K27me3.wig.AML
+    longLabel UMCG 2012-094 H3K27me3 MACS2_wiggler Acute myeloid leukemia signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Bone_marrow/UMCG_2012-094/Acute_myeloid_leukemia/ChIP-Seq/NCMLS/S005EJH1.H3K27me3.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Myeloidcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 EPIRR_ID=IHECRE00000053.1 DISEASE=Acute_myeloid_leukemia CELL_TYPE=Myeloid_cell DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0023467 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000763 DONOR_ID=UMCG_2012-094 ALIGNMENT_SOFTWARE=BWA DONOR_AGE=55_-_60 MOLECULE=genomic_DNA ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS255949 BIOMATERIAL_TYPE=Primary_Cell EXPERIMENT_ID=ERX300651 DONOR_SEX=Female DONOR_ETHNICITY=Caucasian
+
+    track bpHistoneModsS005FHH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel UMCG 2012-082.K27me3.wig.AML
+    longLabel UMCG 2012-082 H3K27me3 MACS2_wiggler Acute myeloid leukemia signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Bone_marrow/UMCG_2012-082/acute_myeloid_leukemia/ChIP-Seq/NCMLS/S005FHH1.H3K27me3.wiggler.20131031.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Myeloidcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 EPIRR_ID=IHECRE00000014.1 DISEASE=Acute_myeloid_leukemia CELL_TYPE=Myeloid_cell DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0023467 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000763 DONOR_ID=UMCG_2012-082 ALIGNMENT_SOFTWARE=BWA DONOR_HEALTH_STATUS=acute_myeloid_leukemia DONOR_AGE=70_-_75 MOLECULE=genomic_DNA ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS353039 BIOMATERIAL_TYPE=Primary_Cell EXPERIMENT_ID=ERX324175 DONOR_SEX=Female DONOR_ETHNICITY=Caucasian
+
+    track bpHistoneModsS005GFH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel pz 286.K27me3.wig.AML-CTR
+    longLabel pz 286 H3K27me3 MACS2_wiggler Acute myeloid leukemia - CTR signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Bone_marrow/pz_286/Acute_myeloid_leukemia_-_CTR/ChIP-Seq/NCMLS/S005GFH1.H3K27me3.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Myeloidcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 EPIRR_ID=IHECRE00000026.1 DISEASE=Acute_myeloid_leukemia CELL_TYPE=Myeloid_cell DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0023467 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000763 DONOR_ID=pz_286 ALIGNMENT_SOFTWARE=BWA DONOR_HEALTH_STATUS=Leukemia DONOR_AGE=60_-_65 MOLECULE=genomic_DNA ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS255951 BIOMATERIAL_TYPE=Primary_Cell EXPERIMENT_ID=ERX272632 DONOR_SEX=Female DONOR_ETHNICITY=Caucasian
+
+    track bpHistoneModsS008RIH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel pz 289.K27me3.wig.APL-ATRA
+    longLabel pz 289 H3K27me3 MACS2_wiggler Acute promyelocytic leukemia - ATRA signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Bone_marrow/pz_289/Acute_promyelocytic_leukemia_-_ATRA/ChIP-Seq/NCMLS/S008RIH1.H3K27me3.wiggler.20140106.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Myeloidcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 EPIRR_ID=IHECRE00000011.1 DISEASE=Acute_promyelocytic_leukemia CELL_TYPE=Myeloid_cell DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0023487 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000763 DONOR_ID=pz_289 ALIGNMENT_SOFTWARE=BWA DONOR_HEALTH_STATUS=Leukemia DONOR_AGE=30_-_35 MOLECULE=genomic_DNA ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS365963 BIOMATERIAL_TYPE=Primary_Cell EXPERIMENT_ID=ERX337067 DONOR_SEX=Female DONOR_ETHNICITY=Caucasian
+
+    track bpHistoneModsS008SGH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel pz 289.K27me3.wig.APL-MC2392
+    longLabel pz 289 H3K27me3 MACS2_wiggler Acute promyelocytic leukemia - MC2392 signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Bone_marrow/pz_289/Acute_promyelocytic_leukemia_-_MC2392/ChIP-Seq/NCMLS/S008SGH1.H3K27me3.wiggler.20141014.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Myeloidcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 EPIRR_ID=IHECRE00000132.1 DISEASE=Acute_promyelocytic_leukemia CELL_TYPE=Myeloid_cell DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0023487 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000763 DONOR_ID=pz_289 ALIGNMENT_SOFTWARE=BWA DONOR_HEALTH_STATUS=Leukemia DONOR_AGE=30_-_35 MOLECULE=genomic_DNA ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS365966 BIOMATERIAL_TYPE=Primary_Cell EXPERIMENT_ID=ERX547930 DONOR_SEX=Female DONOR_ETHNICITY=Caucasian
+
+    track bpHistoneModsS008UCH1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel pz 289.K27me3.wig.APL-MC2884(24h)
+    longLabel pz 289 H3K27me3 MACS2_wiggler Acute promyelocytic leukemia - MC2884 (24h) signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Bone_marrow/pz_289/Acute_promyelocytic_leukemia_-_MC2884_24h/ChIP-Seq/NCMLS/S008UCH1.H3K27me3.wiggler.20140106.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Myeloidcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 EPIRR_ID=IHECRE00000181.1 DISEASE=Acute_promyelocytic_leukemia CELL_TYPE=Myeloid_cell DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0023487 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000763 DONOR_ID=pz_289 ALIGNMENT_SOFTWARE=BWA DONOR_HEALTH_STATUS=Leukemia DONOR_AGE=30_-_35 MOLECULE=genomic_DNA ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS365965 BIOMATERIAL_TYPE=Primary_Cell EXPERIMENT_ID=ERX337063 DONOR_SEX=Female DONOR_ETHNICITY=Caucasian
+
+    track bpHistoneModsS008Y4H1H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel pz 289.K27me3.wig.APL-MC2884(4h)
+    longLabel pz 289 H3K27me3 MACS2_wiggler Acute promyelocytic leukemia - MC2884 (4h) signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Bone_marrow/pz_289/Acute_promyelocytic_leukemia_-_MC2884_4h/ChIP-Seq/NCMLS/S008Y4H1.H3K27me3.wiggler.20140106.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Myeloidcell assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 EPIRR_ID=IHECRE00000002.1 DISEASE=Acute_promyelocytic_leukemia CELL_TYPE=Myeloid_cell DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0023487 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000763 DONOR_ID=pz_289 ALIGNMENT_SOFTWARE=BWA DONOR_HEALTH_STATUS=Leukemia DONOR_AGE=30_-_35 MOLECULE=genomic_DNA ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS365964 BIOMATERIAL_TYPE=Primary_Cell EXPERIMENT_ID=ERX337064 DONOR_SEX=Female DONOR_ETHNICITY=Caucasian
+
+    track bpHistoneModsZ-138_c01H3K27me3MACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2239 on
+    shortLabel Z-138.K27me3.wig.MCL
+    longLabel Z-138 H3K27me3 MACS2_wiggler Mantle cell lymphoma signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cell_Line/Z-138/Mantle_cell_lymphoma/ChIP-Seq/NCMLS/BP_Z-138_c01.H3K27me3.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Mantlecelllymphoma assayType=H3K27me3 view=signal
+    metadata EXPERIMENT_TYPE=H3K27me3 MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000116.1 DISEASE=Mantle_cell_lymphoma ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS333896 BIOMATERIAL_TYPE=Cell_Line DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C2853894 SAMPLE_ONTOLOGY_URI=http://www.ebi.ac.uk/efo/EFO_0005479 EXPERIMENT_ID=ERX297419 SEX=Male ALIGNMENT_SOFTWARE=BWA
+

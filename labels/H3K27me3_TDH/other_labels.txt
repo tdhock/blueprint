@@ -1,0 +1,66 @@
+chr12:1,718,751-1,740,300 peakStart myeloid burkitt
+chr12:1,740,400-1,747,373 peakEnd myeloid burkitt
+chr12:1,806,096-1,844,314 noPeaks
+
+chr12:16,526,500-16,707,429 noPeaks
+chr12:16,751,893-16,760,105 peakStart myeloid burkitt
+chr12:16,761,229-16,774,096 peakEnd myeloid burkitt
+chr12:16,801,293-16,862,901 noPeaks
+
+chr12:21,846,200-21,909,382 noPeaks
+chr12:21,942,440-21,997,052 noPeaks
+chr12:22,090,298-22,094,871 peakStart myeloid
+chr12:22,095,364-22,102,596 peakEnd myeloid
+chr12:22,111,952-22,134,827 noPeaks
+
+chr12:29,781,022-29,916,625 noPeaks
+chr12:29,927,515-29,937,442 peakStart myeloid
+chr12:29,937,493-29,951,593 peakEnd myeloid
+chr12:29,990,995-30,125,192 noPeaks
+
+chr12:40,910,560-41,055,957 noPeaks
+chr12:41,082,961-41,087,006 peakStart myeloid
+chr12:41,087,264-41,093,010 peakEnd myeloid
+chr12:41,106,923-41,175,837 noPeaks
+
+chr12:49,315,604-49,347,638 noPeaks
+chr12:49,350,914-49,372,959 peakStart mantle myeloid burkitt
+chr12:49,373,395-49,404,705 peakEnd mantle myeloid burkitt
+chr12:49,409,450-49,452,543 noPeaks
+chr12:49,460,105-49,485,343 peakStart mantle myeloid burkitt
+chr12:49,487,333-49,495,426 peakEnd mantle myeloid burkitt
+chr12:49,500,445-49,610,656 noPeaks
+chr12:49,738,917-49,774,256 peakEnd mantle myeloid burkitt
+chr12:49,771,850-49,913,624 noPeaks
+
+chr12:59,160,371-59,284,959 noPeaks
+chr12:59,301,896-59,314,300 peakStart myeloid
+chr12:59,314,400-59,322,795 peakEnd myeloid
+chr12:59,323,087-59,360,042 noPeaks
+
+chr12:63,345,961-63,524,518 noPeaks
+chr12:63,535,043-63,544,293 peakStart myeloid
+chr12:63,544,882-63,550,571 peakEnd myeloid
+chr12:63,557,432-63,575,843 noPeaks
+
+chr12:75,315,947-75,545,086 noPeaks
+chr12:75,592,340-75,602,076 peakStart myeloid
+chr12:75,602,345-75,609,105 peakEnd myeloid
+chr12:75,612,676-75,645,465 noPeaks
+
+chr12:79,128,767-79,243,988 noPeaks
+chr12:79,252,229-79,258,302 peakStart myeloid
+chr12:79,258,600-79,265,537 peakEnd myeloid
+chr12:79,268,519-79,296,555 noPeaks
+
+chr12:79,268,519-79,296,555 noPeaks
+chr12:85,300,010-85,306,444 peakStart myeloid
+chr12:85,306,571-85,312,036 peakEnd myeloid
+chr12:85,314,385-85,336,153 noPeaks
+
+chr12:99,211,362-99,267,112 noPeaks
+chr12:99,281,956-99,289,000 peakStart myeloid
+chr12:99,289,005-99,299,379 peakEnd myeloid
+chr12:99,302,025-99,345,328 noPeaks
+
+

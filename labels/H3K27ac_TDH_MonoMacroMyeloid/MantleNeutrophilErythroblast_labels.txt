@@ -1,0 +1,90 @@
+chr10:99,860,172-99,889,644 noPeaks
+chr10:99,892,346-99,894,628 peakStart mantle erythroblast neutrophil
+chr10:99,894,731-99,896,145 peakEnd mantle erythroblast neutrophil
+chr10:99,897,230-99,902,430 noPeaks
+
+chr10:99,073,822-99,077,205 noPeaks
+chr10:99,077,367-99,078,849 peakStart mantle erythroblast neutrophil
+chr10:99,078,946-99,080,444 peakEnd mantle erythroblast neutrophil
+chr10:99,081,959-99,090,749 noPeaks
+chr10:99,091,052-99,094,656 peakStart mantle erythroblast neutrophil
+chr10:99,094,715-99,096,377 peakEnd mantle erythroblast neutrophil
+chr10:99,098,602-99,111,019 noPeaks
+chr10:99,112,344-99,114,271 peakStart neutrophil
+chr10:99,114,533-99,117,239 peakEnd neutrophil
+chr10:99,124,032-99,126,107 peakStart neutrophil
+chr10:99,126,452-99,128,884 peakEnd neutrophil
+
+chr10:98,341,314-98,343,867 noPeaks 
+chr10:98,344,180-98,346,536 peakStart mantle erythroblast neutrophil
+chr10:98,347,113-98,348,624 peakEnd mantle erythroblast neutrophil
+chr10:98,351,488-98,372,275 noPeaks
+chr10:98,376,327-98,378,766 peakStart erythroblast
+chr10:98,379,813-98,387,658 peakEnd erythroblast
+chr10:98,388,618-98,401,714 noPeaks
+chr10:98,403,683-98,405,595 peakStart neutrophil
+chr10:98,407,005-98,409,946 peakEnd neutrophil
+
+chr10:97,832,790-97,847,302 noPeaks
+chr10:97,848,149-97,849,828 peakStart mantle erythroblast neutrophil
+chr10:97,849,831-97,850,842 peakEnd mantle erythroblast neutrophil
+chr10:97,853,329-97,882,222 noPeaks
+chr10:97,889,047-97,889,979 peakStart mantle erythroblast neutrophil
+chr10:97,890,015-97,891,171 peakEnd mantle erythroblast neutrophil
+chr10:97,895,090-97,909,269 noPeaks
+
+chr10:97,219,852-97,284,051 noPeaks
+chr10:97,288,776-97,290,977 peakStart erythroblast
+chr10:97,292,278-97,295,148 peakEnd erythroblast
+chr10:97,296,332-97,319,364 noPeaks
+chr10:97,328,250-97,410,198 noPeaks
+chr10:97,413,300-97,416,299 peakStart mantle erythroblast
+chr10:97,416,374-97,417,890 peakEnd mantle erythroblast
+chr10:97,418,053-97,421,785 noPeaks
+chr10:97,422,405-97,423,608 peakStart erythroblast
+chr10:97,423,985-97,426,823 peakEnd erythroblast
+chr10:97,429,456-97,449,658 noPeaks
+chr10:97,452,937-97,458,557 peaks mantle erythroblast neutrophil
+
+chr10:95,469,584-95,498,812 noPeaks
+chr10:95,500,849-95,502,754 peakStart neutrophil
+chr10:95,502,904-95,504,578 peakEnd neutrophil
+chr10:95,509,675-95,649,708 noPeaks
+chr10:95,652,546-95,653,959 peakStart mantle erythroblast
+chr10:95,654,150-95,656,366 peakEnd mantle erythroblast
+chr10:95,663,859-95,694,696 noPeaks
+
+chr10:94,642,845-94,722,603 noPeaks
+chr10:94,729,009-94,732,213 peakStart erythroblast
+chr10:94,732,927-94,734,897 peakEnd erythroblast
+chr10:94,745,310-94,815,435 noPeaks
+
+chr10:94,349,558-94,351,853 peakStart mantle erythroblast neutrophil
+chr10:94,352,437-94,358,320 peakEnd mantle erythroblast neutrophil
+chr10:94,373,857-94,444,672 noPeaks
+
+chr10:93,452,887-93,469,859 noPeaks 
+chr10:93,470,775-93,472,191 peakStart mantle
+chr10:93,472,200-93,473,298 peakEnd mantle
+chr10:93,476,102-93,553,735 noPeaks
+chr10:93,555,582-93,558,436 peakStart mantle erythroblast neutrophil
+chr10:93,558,582-93,560,175 peakEnd mantle erythroblast neutrophil
+chr10:93,567,897-93,587,501 noPeaks
+
+chr10:89,619,499-89,622,251 peakStart mantle erythroblast neutrophil
+chr10:89,623,313-89,630,286 peakEnd mantle erythroblast neutrophil
+chr10:89,655,900-89,776,388 noPeaks
+
+chr10:85,882,174-85,896,949 noPeaks
+chr10:85,899,715-85,901,576 peakEnd mantle erythroblast neutrophil
+chr10:85,941,130-85,988,020 noPeaks
+
+chr10:71,850,348-71,888,966 noPeaks
+chr10:71,890,372-71,892,464 peakStart mantle erythroblast
+chr10:71,892,597-71,894,313 peakEnd mantle erythroblast
+chr10:71,895,138-71,902,605 noPeaks
+chr10:71,903,117-71,906,332 peakStart mantle erythroblast neutrophil
+chr10:71,906,349-71,909,598 peakEnd mantle erythroblast neutrophil
+chr10:71,909,901-71,927,459 noPeaks
+chr10:71,927,995-71,930,104 peakStart mantle erythroblast neutrophil
+chr10:71,930,582-71,931,506 peakEnd mantle erythroblast neutrophil

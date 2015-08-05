@@ -1,0 +1,280 @@
+track ac3-i3-h2237
+compositeTrack on
+shortLabel Histone - Blueprint
+longLabel Histone Modifications - Blueprint
+subGroup1 sampleType Sample_Type matureneutrophil=mature_neutrophil erythroblast=erythroblast Mantlecelllymphoma=Mantle_cell_lymphoma
+subGroup2 assayType Assay_Type H3K27ac=H3K27ac
+subGroup3 view View peaks=Peaks signal=Signal signal_forward=Signal_Forward signal_reverse=Signal_Reverse profile=Profile
+dimensions dimensionX=assayType dimensionY=sampleType dimA=view
+sortOrder assayType=+ sampleType=+
+dividers assayType
+dragAndDrop subTracks  
+priority 1
+type bed 5
+visibility pack
+color 40,175,220
+
+    track bpHistoneModsC000S5H1H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel C000S5.K27ac.peak.neut
+    longLabel C000S5 H3K27ac MASC2_peak mature neutrophil peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C000S5/mature_neutrophil/ChIP-Seq/NCMLS/C000S5H1.H3K27ac.ppqt_macs2_v2.20130415.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000109.1 DONOR_AGE=65_-_70 ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS150368 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX149095 DONOR_ID=C000S5 DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC0010KH2H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel C0010K.K27ac.peak.neut
+    longLabel C0010K H3K27ac MASC2_peak mature neutrophil peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C0010K/mature_neutrophil/ChIP-Seq/NCMLS/C0010KH2.H3K27ac.ppqt_macs2_v2.20130415.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000004.1 DONOR_AGE=60_-_65 ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS150391 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX232227 DONOR_ID=C0010K DONOR_SEX=Female DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC0011IH2H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel C0011I.K27ac.peak.neut
+    longLabel C0011I H3K27ac MASC2_peak mature neutrophil peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C0011I/mature_neutrophil/ChIP-Seq/NCMLS/C0011IH2.H3K27ac.ppqt_macs2_v2.20130415.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000159.1 DONOR_AGE=50_-_55 ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS150389 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX149097 DONOR_ID=C0011I DONOR_SEX=Female DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC00184H2H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel C00184.K27ac.peak.neut
+    longLabel C00184 H3K27ac MASC2_peak mature neutrophil peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/C00184/mature_neutrophil/ChIP-Seq/NCMLS/C00184H2.H3K27ac.ppqt_macs2_v2.20130415.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000095.1 ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS164468 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX197164 DONOR_ID=C00184 DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC001UYH1H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel C001UY.K27ac.peak.neut
+    longLabel C001UY H3K27ac MASC2_peak mature neutrophil peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C001UY/mature_neutrophil/ChIP-Seq/NCMLS/C001UYH1.H3K27ac.ppqt_macs2_v2.20130819.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000094.1 DONOR_AGE=60_-_65 ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS150411 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX300743 DONOR_ID=C001UY DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC004GDH1H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel C004GD.K27ac.peak.neut
+    longLabel C004GD H3K27ac MASC2_peak mature neutrophil peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/C004GD/mature_neutrophil/ChIP-Seq/NCMLS/C004GDH1.H3K27ac.ppqt_macs2_v2.20130415.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000124.1 ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS206477 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX207032 DONOR_ID=C004GD DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC12012H1H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel C12012.K27ac.peak.neut
+    longLabel C12012 H3K27ac MASC2_peak mature neutrophil peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C12012/mature_neutrophil/ChIP-Seq/NCMLS/C12012H1.H3K27ac.ppqt_macs2_v2.20141014.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000178.1 DONOR_AGE=55_-_60 ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS164466 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX547969 DONOR_ID=C12012 DONOR_SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsJVM-2_c01H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel JVM-2.K27ac.peak.MCL
+    longLabel JVM-2 H3K27ac MASC2_peak Mantle cell lymphoma peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cell_Line/JVM-2/Mantle_cell_lymphoma/ChIP-Seq/NCMLS/BP_JVM-2_c01.H3K27ac.ppqt_macs2_v2.20130819.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Mantlecelllymphoma assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000143.1 DISEASE=Mantle_cell_lymphoma ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS333895 BIOMATERIAL_TYPE=Cell_Line DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0334634 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CLO_0007047 EXPERIMENT_ID=ERX297415 SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS002R5H1H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel S002R5.K27ac.peak.EB
+    longLabel S002R5 H3K27ac MASC2_peak erythroblast peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/S002R5/erythroblast/ChIP-Seq/NCMLS/S002R5H1.H3K27ac.ppqt_macs2_v2.20140513.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=erythroblast assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000193.1 ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS227598 CELL_TYPE=erythroblast BIOMATERIAL_TYPE=Primary_Cell_Culture SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000765;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX406952 DONOR_ID=S002R5 DONOR_SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS002S3H1H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel S002S3.K27ac.peak.EB
+    longLabel S002S3 H3K27ac MASC2_peak erythroblast peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/S002S3/erythroblast/ChIP-Seq/NCMLS/S002S3H1.H3K27ac.ppqt_macs2_v2.20140513.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=erythroblast assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000112.1 ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS227606 CELL_TYPE=erythroblast BIOMATERIAL_TYPE=Primary_Cell_Culture SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000765;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX406951 DONOR_ID=S002S3 DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsZ-138_c01H3K27acMASC2_peakEMBL-EBI
+    type bigBed
+    parent ac3-i3-h2237 on
+    shortLabel Z-138.K27ac.peak.MCL
+    longLabel Z-138 H3K27ac MASC2_peak Mantle cell lymphoma peak from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cell_Line/Z-138/Mantle_cell_lymphoma/ChIP-Seq/NCMLS/BP_Z-138_c01.H3K27ac.ppqt_macs2_v2.20130819.bb
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Mantlecelllymphoma assayType=H3K27ac view=peaks
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000116.1 DISEASE=Mantle_cell_lymphoma ANALYSIS_SOFTWARE=MACS2 SAMPLE_ID=ERS333896 BIOMATERIAL_TYPE=Cell_Line DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C2853894 SAMPLE_ONTOLOGY_URI=http://www.ebi.ac.uk/efo/EFO_0005479 EXPERIMENT_ID=ERX297453 SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC000S5H1H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel C000S5.K27ac.wig.neut
+    longLabel C000S5 H3K27ac MACS2_wiggler mature neutrophil signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C000S5/mature_neutrophil/ChIP-Seq/NCMLS/C000S5H1.H3K27ac.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000109.1 DONOR_AGE=65_-_70 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS150368 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX149095 DONOR_ID=C000S5 DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC0010KH2H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel C0010K.K27ac.wig.neut
+    longLabel C0010K H3K27ac MACS2_wiggler mature neutrophil signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C0010K/mature_neutrophil/ChIP-Seq/NCMLS/C0010KH2.H3K27ac.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000004.1 DONOR_AGE=60_-_65 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS150391 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX232227 DONOR_ID=C0010K DONOR_SEX=Female DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC0011IH2H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel C0011I.K27ac.wig.neut
+    longLabel C0011I H3K27ac MACS2_wiggler mature neutrophil signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C0011I/mature_neutrophil/ChIP-Seq/NCMLS/C0011IH2.H3K27ac.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000159.1 DONOR_AGE=50_-_55 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS150389 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX149097 DONOR_ID=C0011I DONOR_SEX=Female DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC00184H2H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel C00184.K27ac.wig.neut
+    longLabel C00184 H3K27ac MACS2_wiggler mature neutrophil signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/C00184/mature_neutrophil/ChIP-Seq/NCMLS/C00184H2.H3K27ac.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000095.1 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS164468 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX197164 DONOR_ID=C00184 DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC001UYH1H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel C001UY.K27ac.wig.neut
+    longLabel C001UY H3K27ac MACS2_wiggler mature neutrophil signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C001UY/mature_neutrophil/ChIP-Seq/NCMLS/C001UYH1.H3K27ac.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000094.1 DONOR_AGE=60_-_65 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS150411 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX300743 DONOR_ID=C001UY DONOR_SEX=Male DONOR_ETHNICITY=Northern_European ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC004GDH1H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel C004GD.K27ac.wig.neut
+    longLabel C004GD H3K27ac MACS2_wiggler mature neutrophil signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/C004GD/mature_neutrophil/ChIP-Seq/NCMLS/C004GDH1.H3K27ac.wiggler.20130415.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000124.1 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS206477 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX207032 DONOR_ID=C004GD DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsC12012H1H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel C12012.K27ac.wig.neut
+    longLabel C12012 H3K27ac MACS2_wiggler mature neutrophil signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Venous_blood/C12012/mature_neutrophil/ChIP-Seq/NCMLS/C12012H1.H3K27ac.wiggler.20141014.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=matureneutrophil assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000178.1 DONOR_AGE=55_-_60 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS164466 CELL_TYPE=mature_neutrophil BIOMATERIAL_TYPE=Primary_Cell SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000096;http://purl.obolibrary.org/obo/UBERON_0013756 EXPERIMENT_ID=ERX547969 DONOR_ID=C12012 DONOR_SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsJVM-2_c01H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel JVM-2.K27ac.wig.MCL
+    longLabel JVM-2 H3K27ac MACS2_wiggler Mantle cell lymphoma signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cell_Line/JVM-2/Mantle_cell_lymphoma/ChIP-Seq/NCMLS/BP_JVM-2_c01.H3K27ac.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Mantlecelllymphoma assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000143.1 DISEASE=Mantle_cell_lymphoma ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS333895 BIOMATERIAL_TYPE=Cell_Line DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0334634 SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CLO_0007047 EXPERIMENT_ID=ERX297415 SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS002R5H1H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel S002R5.K27ac.wig.EB
+    longLabel S002R5 H3K27ac MACS2_wiggler erythroblast signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/S002R5/erythroblast/ChIP-Seq/NCMLS/S002R5H1.H3K27ac.wiggler.20140513.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=erythroblast assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000193.1 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS227598 CELL_TYPE=erythroblast BIOMATERIAL_TYPE=Primary_Cell_Culture SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000765;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX406952 DONOR_ID=S002R5 DONOR_SEX=Male ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsS002S3H1H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel S002S3.K27ac.wig.EB
+    longLabel S002S3 H3K27ac MACS2_wiggler erythroblast signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cord_blood/S002S3/erythroblast/ChIP-Seq/NCMLS/S002S3H1.H3K27ac.wiggler.20140513.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=erythroblast assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000112.1 ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS227606 CELL_TYPE=erythroblast BIOMATERIAL_TYPE=Primary_Cell_Culture SAMPLE_ONTOLOGY_URI=http://purl.obolibrary.org/obo/CL_0000765;http://purl.obolibrary.org/obo/UBERON_0012168 EXPERIMENT_ID=ERX406951 DONOR_ID=S002S3 DONOR_SEX=Female ALIGNMENT_SOFTWARE=BWA
+
+    track bpHistoneModsZ-138_c01H3K27acMACS2_wigglerEMBL-EBIwiggler
+    type bigWig
+    parent ac3-i3-h2237 on
+    shortLabel Z-138.K27ac.wig.MCL
+    longLabel Z-138 H3K27ac MACS2_wiggler Mantle cell lymphoma signal from NCMLS
+    visibility pack
+    bigDataUrl http://ftp.ebi.ac.uk/pub/databases/blueprint/data/homo_sapiens/Cell_Line/Z-138/Mantle_cell_lymphoma/ChIP-Seq/NCMLS/BP_Z-138_c01.H3K27ac.wiggler.20130819.bw
+    maxHeightPixels 25:25:8
+    autoScale on
+    subGroups sampleType=Mantlecelllymphoma assayType=H3K27ac view=signal
+    metadata EXPERIMENT_TYPE=H3K27ac MOLECULE=genomic_DNA EPIRR_ID=IHECRE00000116.1 DISEASE=Mantle_cell_lymphoma ANALYSIS_SOFTWARE=WIGGLER SAMPLE_ID=ERS333896 BIOMATERIAL_TYPE=Cell_Line DISEASE_ONTOLOGY_URI=http://ncimeta.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C2853894 SAMPLE_ONTOLOGY_URI=http://www.ebi.ac.uk/efo/EFO_0005479 EXPERIMENT_ID=ERX297453 SEX=Male ALIGNMENT_SOFTWARE=BWA
+

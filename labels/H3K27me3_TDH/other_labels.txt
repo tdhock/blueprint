@@ -53,7 +53,7 @@ chr12:79,252,229-79,258,302 peakStart myeloid
 chr12:79,258,600-79,265,537 peakEnd myeloid
 chr12:79,268,519-79,296,555 noPeaks
 
-chr12:79,268,519-79,296,555 noPeaks
+chr12:85,284,148-85,299,222 noPeaks
 chr12:85,300,010-85,306,444 peakStart myeloid
 chr12:85,306,571-85,312,036 peakEnd myeloid
 chr12:85,314,385-85,336,153 noPeaks

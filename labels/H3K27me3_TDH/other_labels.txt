@@ -30,7 +30,7 @@ chr12:49,409,450-49,452,543 noPeaks
 chr12:49,460,105-49,485,343 peakStart mantle myeloid burkitt
 chr12:49,487,333-49,495,426 peakEnd mantle myeloid burkitt
 chr12:49,500,445-49,610,656 noPeaks
-chr12:49,738,917-49,774,256 peakEnd mantle myeloid burkitt
+chr12:49,738,917-49,771,256 peakEnd mantle myeloid burkitt
 chr12:49,771,850-49,913,624 noPeaks
 
 chr12:59,160,371-59,284,959 noPeaks

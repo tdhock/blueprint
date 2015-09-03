@@ -1,0 +1,9 @@
+	View 	Donor 	Sample 	Track Name 	Species 	Consortium
+	signal	McGill0239	MS023901	McGill_MS023901_cd4pabtc_H3K27ac_signal	human	CEEHRC
+	signal	McGill0277	MS027701	McGill_MS027701_cd4pabtc_H3K27ac_signal	human	CEEHRC
+	signal	McGill0280	MS028001	McGill_MS028001_cd4pabtc_H3K27ac_signal	human	CEEHRC
+	signal	McGill0288	MS028801	McGill_MS028801_cd4pabtc_H3K27ac_signal	human	CEEHRC
+	signal	McGill0290	MS029001	McGill_MS029001_cd4pabtc_H3K27ac_signal	human	CEEHRC
+	signal	McGill0291	MS029101	McGill_MS029101_cd4pabtc_H3K27ac_signal	human	CEEHRC
+	signal	McGill0297	MS029701	McGill_MS029701_cd4pabtc_H3K27ac_signal	human	CEEHRC
+	signal	McGill0299	MS029901	McGill_MS029901_cd4pabtc_H3K27ac_signal	human	CEEHRC

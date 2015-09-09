@@ -13,3 +13,8 @@ chr1:32,756,454-32,757,498 peakStart mono neutro
 chr1:32,757,872-32,758,620 peakEnd mono neutro
 chr1:32,759,476-32,764,029 noPeaks
 
+chr1:32,855,646-32,858,753 noPeaks
+chr1:32,859,365-32,859,811 peakStart mono neutro
+chr1:32,860,381-32,861,027 peakEnd mono neutro
+chr1:32,861,249-32,862,971 noPeaks
+

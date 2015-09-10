@@ -1,4 +1,5 @@
-works_with_R("3.2.2", data.table="1.9.5", ggplot2="1.0")
+works_with_R("3.2.2", data.table="1.9.5", ggplot2="1.0.1",
+             testthat="0.10.0")
 
 getDNA <- function(chrom, from, to, genome="hg19"){
   u <-
@@ -40,6 +41,11 @@ align <- function(ref.dt, read, start, cigar){
   cigar.dt <-
     data.table(bases=as.integer(cigar.mat[, "bases"]),
                code=cigar.mat[, "code"])
+  bad.cigar <- "[^ISDM]"
+  if(any(grepl(bad.cigar, cigar.dt$code))){
+    print(cigar.dt)
+    stop("cigar matched ", bad.cigar)
+  }
   stopifnot(sum(cigar.dt[grepl("[MIS=X]", code), bases]) == length(read.base))
   aligned <- 
     data.table(cigar=character(sum(cigar.dt$bases)))
@@ -50,13 +56,13 @@ align <- function(ref.dt, read, start, cigar){
     aligned$cigar[first.row:last.row] <- cigar$code
     first.row <- last.row + 1
   }
-  ref.diff <- ifelse(aligned$cigar == "I", 0, 1)
-  aligned$ref.pos <- ifelse(ref.diff==0, NA, start + cumsum(ref.diff) - 1)
-  read.diff <- ifelse(aligned$cigar == "D", 0, 1)
+  ref.diff <- ifelse(grepl("[IS]", aligned$cigar), 0, 1)
+  aligned$ref.pos <- ifelse(ref.diff==0, NA, start + cumsum(ref.diff) - 1L)
+  read.diff <- ifelse(aligned$cigar == "D", 0L, 1L)
   aligned$read.pos <- ifelse(read.diff==0, NA, cumsum(read.diff))
   aligned$read.base <- read.base[aligned$read.pos]
   setkey(ref.dt, ref.pos)
-  aligned$ref.base <- ref.dt[aligned$ref.pos]$ref.base
+  aligned$ref.base <- ref.dt[J(aligned$ref.pos)]$ref.base
   aligned
 }  
 
@@ -77,29 +83,45 @@ test.expected <-
              ref.pos=c(5:7, NA, 8:16),
              read.base, ref.base)
 for(col.name in names(test.expected)){
-  all.equal(test.expected[[col.name]], test.computed[[col.name]])
+  expect_equal(test.computed[[col.name]], test.expected[[col.name]])
 }
 
+## From the 26th line of onePeak.sam.
 line2 <- getDNA("chr1", 32398237, 32398278)
+cigar26 <- "2S40M"
+seq26 <- "AAACTGACACCTCTATACGTAGTTAATAGTTCAAAAGATGAA"
+"ACTGACACCTCTATACGTAGTTAATAGTTCAAAAGATGAA"
+start26 <- 32398549L
+test.computed <- align(ref, seq26, start26, cigar26)
+test.expected <-
+  data.table(ref.pos=c(NA, NA, start26:(start26+39)),
+             read.pos=1:42)
+for(col.name in names(test.expected)){
+  expect_equal(test.computed[[col.name]], test.expected[[col.name]])
+}
+
 onePeak <- fread("onePeak.sam", drop=c(1:2, 5, 7:9, 11:21))
 setnames(onePeak, c("chrom", "first", "cigar", "seq"))
 table(nchar(onePeak$seq))
 join.list <- list()
 for(seq.i in 1:nrow(onePeak)){
+  cat(sprintf("%4d / %4d reads\n", seq.i, nrow(onePeak)))
   one.seq <- onePeak[seq.i, ]
-  exp.base <- unlist(strsplit(one.seq$seq, split=""))
-  cigar.mat <- cigar.list[[seq.i]]
+  align.dt <- with(one.seq, align(ref, seq, first, cigar))
 
-  last <- one.seq$first + length(exp.base)-1
-  setkey(seq.dt, chrom, position)
-  
   ggplot()+
-    geom_text(aes(position, "seq", label=exp.base),
-              data=seq.dt)+
-    geom_text(aes(position, "ref", label=ref.base),
+    geom_text(aes(ref.pos, "seq", label=exp.base),
+              data=align.dt)+
+    geom_text(aes(ref.pos, "ref", label=ref.base),
               data=ref)
 
-  one.join <- ref[seq.dt]
-  join.list[[seq.i]] <- data.table(seq.i, one.join)
+  join.list[[seq.i]] <- data.table(seq.i, align.dt)
 }
 join <- do.call(rbind, join.list)
+setkey(join, ref.pos)
+mutated <- join[ref.base != read.base, ]
+others <- join[ref.pos %in% mutated$ref.pos, ]
+by.pos <- split(others, others$ref.pos)
+mutated.props <- sort(sapply(by.pos, with, mean(read.base != ref.base)))
+by.pos[names(mutated.props)]
+## TODO: plot these SNPs in context of the peak.

@@ -1,0 +1,59 @@
+chr2:33,141,208-33,141,287 noPeaks
+chr2:33,141,293-33,141,393 peakStart mono2 neutro2 Input
+chr2:33,141,400-33,141,465 peakEnd mono2 neutro2 Input
+chr2:33,141,731-33,141,885 noPeaks
+
+chr2:68,907,384-68,911,577 noPeaks
+chr2:68,913,941-68,916,820 peakStart mono2 neutro2
+chr2:68,918,222-68,923,227 peakEnd mono2 neutro2
+chr2:68,926,380-68,932,473 noPeaks
+
+chr2:68,688,312-68,690,790 noPeaks
+chr2:68,692,756-68,694,457 peakStart mono2 neutro2
+chr2:68,694,540-68,696,492 peakEnd mono2 neutro2
+chr2:68,697,225-68,699,990 noPeaks
+
+chr2:68,470,009-68,474,228 noPeaks
+chr2:68,476,628-68,479,012 peakStart mono2 neutro2
+chr2:68,479,072-68,481,671 peakEnd mono2 neutro2
+chr2:68,483,466-68,489,341 noPeaks
+
+chr2:68,288,086-68,288,857 noPeaks
+chr2:68,289,000-68,289,872 peakStart mono2 neutro2
+chr2:68,290,081-68,290,804 peakEnd mono2 neutro2
+chr2:68,291,203-68,292,257 noPeaks
+
+chr2:157,182,697-157,185,805 noPeaks
+chr2:157,187,564-157,189,770 peakStart mono2 neutro2
+chr2:157,191,052-157,193,105 peakEnd mono2 neutro2
+chr2:157,193,206-157,195,886 noPeaks
+
+chr2:171,783,420-171,784,216 noPeaks
+chr2:171,784,220-171,785,986 peakStart mono2 neutro2
+chr2:171,785,990-171,787,802 peakEnd mono2 neutro2
+chr2:171,789,283-171,792,343 noPeaks
+
+chr2:145,359,825-145,361,771 noPeaks
+chr2:145,362,018-145,364,949 peakStart mono2 neutro2
+chr2:145,365,304-145,369,628 peakEnd mono2 neutro2
+chr2:145,372,042-145,380,299 noPeaks
+
+chr2:145,079,573-145,084,139 noPeaks
+chr2:145,087,778-145,090,067 peakStart mono2 neutro2
+chr2:145,090,180-145,091,036 peakEnd mono2 neutro2
+chr2:145,091,398-145,094,071 noPeaks
+
+chr2:152,138,170-152,142,206 noPeaks
+chr2:152,144,419-152,146,186 peakStart mono2 neutro2
+chr2:152,146,414-152,147,426 peakEnd mono2 neutro2
+chr2:152,148,290-152,150,224 noPeaks
+
+chr2:175,108,078-175,110,351 noPeaks
+chr2:175,112,127-175,113,140 peakStart mono2 neutro2
+chr2:175,113,150-175,114,069 peakEnd mono2 neutro2
+chr2:175,114,843-175,116,790 noPeaks
+
+chr2:182,752,743-182,754,060 noPeaks
+chr2:182,755,882-182,756,916 peakStart mono2 neutro2
+chr2:182,757,354-182,758,518 peakEnd mono2 neutro2
+chr2:182,759,650-182,762,310 noPeaks

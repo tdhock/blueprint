@@ -1,0 +1,77 @@
+chr3:32,400,916-32,431,914 noPeaks
+chr3:32,432,407-32,433,678 peakStart neutro
+chr3:32,433,860-32,434,732 peakEnd neutro
+chr3:32,436,021-32,442,156 noPeaks
+chr3:32,442,424-32,443,161 peakStart neutro
+chr3:32,443,483-32,443,869 peakEnd neutro
+chr3:32,444,780-32,462,516 noPeaks
+
+chr3:33,097,732-33,135,694 noPeaks
+chr3:33,136,575-33,138,409 peakStart neutro
+chr3:33,138,655-33,139,712 peakEnd neutro
+chr3:33,140,810-33,154,287 noPeaks
+chr3:33,154,679-33,155,370 peakStart neutro
+chr3:33,155,891-33,156,914 peakEnd neutro
+chr3:33,159,776-33,193,959 noPeaks
+
+chr3:33,428,497-33,476,229 noPeaks
+chr3:33,479,853-33,481,670 peakStart neutro
+chr3:33,482,691-33,483,916 peakEnd neutro
+chr3:33,486,265-33,514,806 noPeaks
+
+chr3:33,725,900-33,757,251 noPeaks
+chr3:33,757,611-33,759,677 peakStart neutro
+chr3:33,760,020-33,760,777 peakEnd neutro
+chr3:33,763,858-33,838,105 noPeaks
+chr3:33,839,112-33,839,980 peakStart neutro
+chr3:33,840,646-33,841,473 peakEnd neutro
+chr3:33,842,817-33,882,338 noPeaks
+
+chr3:36,917,196-36,946,933 noPeaks
+chr3:36,947,145-36,949,452 peakStart neutro
+chr3:36,950,069-36,951,342 peakEnd neutro
+chr3:36,961,424-36,984,652 noPeaks
+chr3:36,984,918-36,985,817 peakStart neutro
+chr3:36,986,389-36,987,272 peakEnd neutro
+chr3:36,991,245-37,028,242 noPeaks
+chr3:37,033,110-37,034,355 peakStart neutro
+chr3:37,035,256-37,036,241 peakEnd neutro
+chr3:37,036,242-37,040,650 noPeaks
+
+chr3:37,191,194-37,213,937 noPeaks
+chr3:37,215,963-37,217,595 peakStart neutro
+chr3:37,218,105-37,219,540 peakEnd neutro
+chr3:37,221,451-37,282,423 noPeaks
+chr3:37,283,715-37,284,786 peakStart neutro
+chr3:37,285,341-37,286,362 peakEnd neutro
+chr3:37,287,872-37,336,353 noPeaks
+
+chr3:37,457,275-37,490,637 noPeaks
+chr3:37,492,632-37,494,098 peakStart neutro
+chr3:37,494,213-37,495,502 peakEnd neutro
+chr3:37,497,407-37,558,791 noPeaks
+
+chr3:37,850,839-37,901,133 noPeaks
+chr3:37,901,677-37,902,243 peakStart neutro
+chr3:37,902,885-37,904,595 peakEnd neutro
+chr3:37,906,871-37,988,538 noPeaks
+
+chr3:38,022,180-38,034,848 noPeaks
+chr3:38,034,975-38,035,680 peakStart neutro
+chr3:38,035,943-38,036,501 peakEnd neutro
+chr3:38,036,502-38,039,435 noPeaks
+chr3:38,039,509-38,040,228 peakStart neutro
+chr3:38,040,464-38,041,065 peakEnd neutro
+chr3:38,041,690-38,064,430 noPeaks
+chr3:38,064,824-38,065,956 peakStart neutro
+chr3:38,066,393-38,067,704 peakEnd neutro
+chr3:38,067,705-38,070,132 noPeaks
+
+chr3:38,159,750-38,176,340 noPeaks
+chr3:38,176,604-38,178,231 peakStart neutro
+chr3:38,180,814-38,182,340 peakEnd neutro
+chr3:38,184,371-38,205,611 noPeaks
+chr3:38,205,646-38,206,486 peakStart neutro
+chr3:38,207,586-38,208,337 peakEnd neutro
+chr3:38,210,108-38,245,341 noPeaks
+

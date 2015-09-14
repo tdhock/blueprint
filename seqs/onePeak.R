@@ -13,7 +13,7 @@ getDNA <- function(chrom, from, to, genome="hg19"){
              ref.base)
 }
 
-ref <- getDNA("chr1", 32398211, 32406079)
+ref <- getDNA("chr1", 32398180, 32406111)
 setkey(ref, chrom, ref.pos)
 
 cigar.pattern <-
@@ -48,14 +48,7 @@ align <- function(ref.dt, read, start, cigar){
   }
   stopifnot(sum(cigar.dt[grepl("[MIS=X]", code), bases]) == length(read.base))
   aligned <- 
-    data.table(cigar=character(sum(cigar.dt$bases)))
-  first.row <- 1
-  for(cigar.i in 1:nrow(cigar.dt)){
-    cigar <- cigar.dt[cigar.i, ]
-    last.row <- first.row + cigar$bases - 1
-    aligned$cigar[first.row:last.row] <- cigar$code
-    first.row <- last.row + 1
-  }
+    data.table(cigar=cigar.dt[, rep(code, bases)])
   ref.diff <- ifelse(grepl("[IS]", aligned$cigar), 0, 1)
   aligned$ref.pos <- ifelse(ref.diff==0, NA, start + cumsum(ref.diff) - 1L)
   read.diff <- ifelse(aligned$cigar == "D", 0L, 1L)

@@ -1,5 +1,31 @@
-works_with_R("3.2.2", data.table="1.9.5", ggplot2="1.0.1",
-             testthat="0.10.0")
+works_with_R("3.2.2",
+             IRanges="2.2.7",
+             Gviz="1.13.7",
+             data.table="1.9.5",
+             ggplot2="1.0.1",
+             testthat="0.10.0",
+             "tdhock/PeakSegJoint@4941036ace97855210e81acf2492592ec3b1b32c")
+
+st <- c(2000000, 2070000, 2100000, 2160000)
+ed <- c(2050000, 2130000, 2150000, 2170000)
+a <- AnnotationTrack(start=st, end=ed)
+plotTracks(a)
+
+st <- c(2000000, 2070000, 2140000, 2160000)
+ed <- c(2050000, 2130000, 2150000, 2170000)
+a <- AnnotationTrack(start=st, end=ed)
+plotTracks(a)
+
+st <- c(2000000, 2020000, 2060000, 2090000, 2020000)
+ed <- c(2050000, 2070000, 2100000, 2130000, 2030000)
+a <- AnnotationTrack(start=st, end=ed)
+plotTracks(a)
+
+y <- disjointBins(IRanges(st, ed))
+df <- data.frame(st, ed, y)
+ggplot()+
+  geom_segment(aes(st, y, xend=ed, yend=y),
+               data=df)
 
 getDNA <- function(chrom, from, to, genome="hg19"){
   u <-
@@ -95,6 +121,7 @@ for(col.name in names(test.expected)){
 
 onePeak <- fread("onePeak.sam", drop=c(1:2, 5, 7:9, 11:21))
 setnames(onePeak, c("chrom", "first", "cigar", "seq"))
+onePeak$seq.i <- 1:nrow(onePeak)
 table(nchar(onePeak$seq))
 join.list <- list()
 for(seq.i in 1:nrow(onePeak)){
@@ -116,5 +143,75 @@ mutated <- join[ref.base != read.base, ]
 others <- join[ref.pos %in% mutated$ref.pos, ]
 by.pos <- split(others, others$ref.pos)
 mutated.props <- sort(sapply(by.pos, with, mean(read.base != ref.base)))
-by.pos[names(mutated.props)]
-## TODO: plot these SNPs in context of the peak.
+
+mutated.others.list <- list()
+show.reads.list <- list()
+for(ref.pos in names(mutated.props)){
+  one.pos <- by.pos[[ref.pos]]
+  one.pos[, pos.seq.i := seq_along(seq.i)]
+  mutated.others.list[[ref.pos]] <- one.pos
+  some.seqs <- onePeak[one.pos$seq.i, ]
+  some.seqs$pos.seq.i <- one.pos$pos.seq.i
+  show.reads.list[[ref.pos]] <-
+    data.table(ref.pos, some.seqs)
+}
+mutated.others <- do.call(rbind, mutated.others.list)
+show.reads <- do.call(rbind, show.reads.list)
+
+ggplot()+
+  scale_color_discrete("mutation")+
+  geom_text(aes(ref.pos, pos.seq.i, label=read.base,
+                color=ifelse(read.base==ref.base, "hg19", "SNP")),
+            data=mutated.others)
+
+ggplot()+
+  scale_color_discrete("mutation")+
+  geom_text(aes(factor(ref.pos), pos.seq.i, label=read.base,
+                color=ifelse(read.base==ref.base, "hg19", "SNP")),
+            data=mutated.others)
+
+ggplot()+
+  ggtitle("this plot is misleading since it shows some reads twice")+
+  theme_bw()+
+  theme(panel.margin=grid::unit(0, "cm"))+
+  facet_grid(. ~ ref.pos, scales="free", space="free")+
+  scale_color_discrete("mutation")+
+  geom_segment(aes(first-0.5, pos.seq.i,
+                   xend=first+nchar(seq)-0.5, yend=pos.seq.i),
+               data=show.reads)+
+  geom_text(aes(ref.pos, pos.seq.i,
+                color=ifelse(read.base==ref.base, "hg19", "SNP"),
+                label=read.base),
+            data=mutated.others)
+
+show.reads[, chromStart := first-1]
+show.reads[, chromEnd := chromStart+nchar(seq)]
+clustered <- clusterPeaks(show.reads)
+by.cluster <- split(clustered, clustered$cluster)
+cluster.name <- "7"
+show.seqs.by.cluster <- list()
+for(cluster.name in names(by.cluster)){
+  one.cluster <- by.cluster[[cluster.name]]
+  ##cat(cluster.name, "\n");print(table(one.cluster$ref.pos))
+  cluster.seqs <- onePeak[unique(one.cluster$seq.i), ]
+  cluster.seqs[, last := first + nchar(seq)]
+  cluster.seqs$y <- cluster.seqs[, disjointBins(IRanges(first, last))]
+  show.seqs.by.cluster[[cluster.name]] <-
+    data.table(cluster.name, cluster.seqs)
+}
+show.seqs <- do.call(rbind, show.seqs.by.cluster)
+
+## TODO: add SNPs to this plot:
+ggplot()+
+  ggtitle("this plot is misleading since it shows some reads twice")+
+  theme_bw()+
+  theme(panel.margin=grid::unit(0, "cm"))+
+  facet_grid(. ~ cluster.name, space="free", scales="free")+
+  scale_color_discrete("mutation")+
+  geom_segment(aes(first-0.5, y,
+                   xend=last+0.5, yend=y),
+               data=show.seqs)
+
+
+
+

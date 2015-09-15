@@ -141,6 +141,7 @@ for(seq.i in 1:nrow(onePeak)){
 
   join.list[[seq.i]] <- data.table(seq.i, align.dt)
 }
+onePeak[, y := disjointBins(IRanges(first, last))]
 join <- do.call(rbind, join.list)
 setkey(join, ref.pos)
 mutated <- join[ref.base != read.base, ]
@@ -204,17 +205,38 @@ for(cluster.name in names(by.cluster)){
 }
 show.seqs <- do.call(rbind, show.seqs.by.cluster)
 
-## TODO: add SNPs to this plot:
+## All reads, even those that do not overlap SNPs.
+mutated.others$global.y <- onePeak[mutated.others$seq.i]$y
 ggplot()+
-  ggtitle("this plot is misleading since it shows some reads twice")+
+  theme_bw()+
+  theme(panel.margin=grid::unit(0, "cm"))+
+  ylab("number of aligned reads")+
+  xlab("position on chr1 (kilo bases = kb)")+
+  scale_color_manual("mutation", values=c(hg19="black", SNP="red"))+
+  geom_segment(aes((first-0.5)/1e3, y,
+                   xend=(last+0.5)/1e3, yend=y),
+               data=onePeak)+
+  geom_text(aes(ref.pos/1e3, global.y,
+                color=ifelse(read.base==ref.base, "hg19", "SNP"),
+                label=read.base),
+            data=mutated.others)
+
+## All reads that overlap at least one SNP:
+setkey(show.seqs, seq.i)
+setkey(mutated.others, seq.i)
+mo.clustered <- mutated.others[show.seqs]
+ggplot()+
   theme_bw()+
   theme(panel.margin=grid::unit(0, "cm"))+
   facet_grid(. ~ cluster.name, space="free", scales="free")+
-  scale_color_discrete("mutation")+
-  geom_segment(aes(first-0.5, y,
-                   xend=last+0.5, yend=y),
-               data=show.seqs)
-
-
-
+  ylab("number of aligned reads")+
+  xlab("position on chr1 (kilo bases = kb)")+
+  scale_color_manual("mutation", values=c(hg19="black", SNP="red"))+
+  geom_segment(aes((first-0.5)/1e3, y,
+                   xend=(last+0.5)/1e3, yend=y),
+               data=show.seqs)+
+  geom_text(aes(ref.pos/1e3, y,
+                color=ifelse(read.base==ref.base, "hg19", "SNP"),
+                label=read.base),
+            data=mo.clustered)
 

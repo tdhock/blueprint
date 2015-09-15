@@ -150,9 +150,13 @@ others <- join[ref.pos %in% mutated$ref.pos, ]
 by.pos <- split(others, others$ref.pos)
 
 prop.mutated <- sapply(by.pos, with, mean(read.base != ref.base))
+n.mutated <- sapply(by.pos, with, sum(read.base != ref.base))
+n.total <- sapply(by.pos, nrow)
 props <-
   data.table(ref.pos=as.integer(names(prop.mutated)),
              prop.mutated,
+             n.mutated,
+             n.total,
              fake.pos=seq_along(prop.mutated))
 
 mutated.others.list <- list()
@@ -219,22 +223,48 @@ by.cluster <- split(clustered, clustered$cluster)
 cluster.name <- "7"
 show.seqs.by.cluster <- list()
 setkey(props, ref.pos)
+setkey(mutated.others, seq.i)
 props.by.cluster <- list()
 cluster.fac.levs <- paste0("cluster", names(by.cluster))
+cluster.info.list <- list()
+mo.clustered.list <- list()
 for(cluster.i in seq_along(by.cluster)){
   cluster.name <- names(by.cluster)[[cluster.i]]
   cluster.fac <- factor(cluster.fac.levs[[cluster.i]], cluster.fac.levs)
   one.cluster <- by.cluster[[cluster.name]]
-  props.by.cluster[[cluster.name]] <-
-    data.table(cluster.fac, props[J(unique(one.cluster$ref.pos))])
   ##cat(cluster.name, "\n");print(table(one.cluster$ref.pos))
-  cluster.seqs <- onePeak[unique(one.cluster$seq.i), ]
+  cluster.seq.vec <- unique(one.cluster$seq.i)
+  cluster.seqs <- onePeak[cluster.seq.vec, ]
+  cluster.info.list[[cluster.name]] <- info <- cluster.seqs[, {
+    data.table(cluster.fac,
+               clusterStart=min(first),
+               clusterEnd=max(last))
+  }]
   cluster.seqs$y <- cluster.seqs[, disjointBins(IRanges(first, last))]
+  normalize <- function(x){
+    info[, (x-clusterStart)/(clusterEnd-clusterStart)]
+  }
+  cluster.props <- props[J(unique(one.cluster$ref.pos))]
+  cluster.props[, `:=`(before.norm=normalize(ref.pos-0.5),
+                       after.norm=normalize(ref.pos+0.5))
+                ]
+  props.by.cluster[[cluster.name]] <-
+    data.table(cluster.fac, cluster.props)
+  cluster.mo <- mutated.others[J(cluster.seq.vec)]
+  setkey(cluster.seqs, seq.i)
+  cluster.mo$y <- cluster.seqs[J(cluster.mo$seq.i)]$y
+  cluster.mo[, ref.pos.norm := normalize(ref.pos)]
+  mo.clustered.list[[cluster.name]] <- data.table(cluster.fac, cluster.mo)
+  cluster.seqs[, `:=`(first.norm=normalize(first-0.5),
+                      last.norm=normalize(last+0.5))
+               ]
   show.seqs.by.cluster[[cluster.name]] <-
     data.table(cluster.fac, cluster.seqs)
 }
 show.seqs <- do.call(rbind, show.seqs.by.cluster)
 clustered.props <- do.call(rbind, props.by.cluster)
+cluster.info <- do.call(rbind, cluster.info.list)
+mo.clustered <- do.call(rbind, mo.clustered.list)
 
 ## All reads, even those that do not overlap SNPs.
 mutated.others$global.y <- onePeak[mutated.others$seq.i]$y
@@ -262,9 +292,7 @@ print(allReads)
 dev.off()
 
 ## All reads that overlap at least one SNP:
-setkey(show.seqs, seq.i)
-setkey(mutated.others, seq.i)
-mo.clustered <- mutated.others[show.seqs]
+mo.clustered <- do.call(rbind, mo.clustered.list)
 someReads <- 
 ggplot()+
   geom_tallrect(aes(xmin=(ref.pos-1.5)/1e3, xmax=(ref.pos+1.5)/1e3,
@@ -286,6 +314,59 @@ ggplot()+
                 color=ifelse(read.base==ref.base, "hg19", "SNP"),
                 label=read.base),
             data=mo.clustered)
+
+w <- 1200
+viz <-
+  list(allReads=ggplot()+
+         theme_bw()+
+         ggtitle("click to zoom")+
+         theme_animint(width=w)+
+         geom_text(aes(ref.pos/1e3, y,
+                       color=ifelse(read.base==ref.base, "hg19", "SNP"),
+                       label=read.base),
+                   data=mo.clustered)+
+         ylab("number of aligned reads")+
+         xlab("position on chr1 (kilo bases = kb)")+
+         scale_color_manual("mutation", values=c(hg19="black", SNP="red"))+
+         geom_segment(aes((first-0.5)/1e3, y,
+                          xend=(last+0.5)/1e3, yend=y),
+                      data=onePeak)+
+         geom_tallrect(aes(xmin=clusterStart/1e3, xmax=clusterEnd/1e3,
+                           clickSelects=cluster.fac),
+                       alpha=0.5,
+                       data=cluster.info),
+
+       zoom=ggplot()+
+         theme_bw()+
+         ggtitle("zoomed plot")+
+         theme_animint(width=w)+
+         scale_fill_gradient(low="black", high="red", limits=c(0, 1))+
+         ylab("number of aligned reads")+
+         scale_x_continuous("",
+                            breaks=c())+
+         scale_color_manual("mutation", values=c(hg19="black", SNP="red"))+
+         geom_segment(aes(first.norm, y,
+                          showSelected=cluster.fac,
+                          xend=last.norm, yend=y),
+                      data=show.seqs)+
+         geom_text(aes(ref.pos.norm, y,
+                       showSelected=cluster.fac,
+                       color=ifelse(read.base==ref.base, "hg19", "SNP"),
+                       label=read.base),
+                   data=mo.clustered)+
+         geom_tallrect(aes(xmin=before.norm, xmax=after.norm,
+                           tooltip=sprintf("%d/%d=%.1f%% mutated",
+                             n.mutated, n.total, prop.mutated*100),
+                           fill=prop.mutated,
+                           showSelected=cluster.fac),
+                       alpha=0.5,
+                       color=NA,
+                       data=clustered.props),
+
+       title="SNPs in one sample of ChIP-seq data")
+
+animint2dir(viz, "figure-onePeak")
+
 pdf("figure-onePeak.pdf", w=20)
 print(someReads)
 dev.off()

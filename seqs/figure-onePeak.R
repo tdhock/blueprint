@@ -4,6 +4,7 @@ works_with_R("3.2.2",
              data.table="1.9.5",
              ggplot2="1.0.1",
              testthat="0.10.0",
+             "tdhock/animint@a35adc6315ebac1350d3376df2a1a4eb6004c083",
              "tdhock/PeakSegJoint@4941036ace97855210e81acf2492592ec3b1b32c")
 
 st <- c(2000000, 2070000, 2100000, 2160000)
@@ -219,21 +220,25 @@ cluster.name <- "7"
 show.seqs.by.cluster <- list()
 setkey(props, ref.pos)
 props.by.cluster <- list()
-for(cluster.name in names(by.cluster)){
+cluster.fac.levs <- paste0("cluster", names(by.cluster))
+for(cluster.i in seq_along(by.cluster)){
+  cluster.name <- names(by.cluster)[[cluster.i]]
+  cluster.fac <- factor(cluster.fac.levs[[cluster.i]], cluster.fac.levs)
   one.cluster <- by.cluster[[cluster.name]]
   props.by.cluster[[cluster.name]] <-
-    data.table(cluster.name, props[J(unique(one.cluster$ref.pos))])
+    data.table(cluster.fac, props[J(unique(one.cluster$ref.pos))])
   ##cat(cluster.name, "\n");print(table(one.cluster$ref.pos))
   cluster.seqs <- onePeak[unique(one.cluster$seq.i), ]
   cluster.seqs$y <- cluster.seqs[, disjointBins(IRanges(first, last))]
   show.seqs.by.cluster[[cluster.name]] <-
-    data.table(cluster.name, cluster.seqs)
+    data.table(cluster.fac, cluster.seqs)
 }
 show.seqs <- do.call(rbind, show.seqs.by.cluster)
 clustered.props <- do.call(rbind, props.by.cluster)
 
 ## All reads, even those that do not overlap SNPs.
 mutated.others$global.y <- onePeak[mutated.others$seq.i]$y
+allReads <- 
 ggplot()+
   geom_tallrect(aes(xmin=(ref.pos-10.5)/1e3, xmax=(ref.pos+10.5)/1e3,
                     fill=prop.mutated),
@@ -252,11 +257,15 @@ ggplot()+
                 color=ifelse(read.base==ref.base, "hg19", "SNP"),
                 label=read.base),
             data=mutated.others)
+pdf("figure-onePeak-allReads.pdf", w=20)
+print(allReads)
+dev.off()
 
 ## All reads that overlap at least one SNP:
 setkey(show.seqs, seq.i)
 setkey(mutated.others, seq.i)
 mo.clustered <- mutated.others[show.seqs]
+someReads <- 
 ggplot()+
   geom_tallrect(aes(xmin=(ref.pos-1.5)/1e3, xmax=(ref.pos+1.5)/1e3,
                     fill=prop.mutated),
@@ -265,9 +274,10 @@ ggplot()+
   scale_fill_gradient(low="black", high="red", limits=c(0, 1))+
   theme_bw()+
   theme(panel.margin=grid::unit(0, "cm"))+
-  facet_grid(. ~ cluster.name, space="free", scales="free")+
+  facet_grid(. ~ cluster.fac, space="free", scales="free")+
   ylab("number of aligned reads")+
-  xlab("position on chr1 (kilo bases = kb)")+
+  scale_x_continuous("position on chr1 (kilo bases = kb)",
+                     breaks=seq(32398, 32406, by=1))+
   scale_color_manual("mutation", values=c(hg19="black", SNP="red"))+
   geom_segment(aes((first-0.5)/1e3, y,
                    xend=(last+0.5)/1e3, yend=y),
@@ -276,4 +286,6 @@ ggplot()+
                 color=ifelse(read.base==ref.base, "hg19", "SNP"),
                 label=read.base),
             data=mo.clustered)
-
+pdf("figure-onePeak.pdf", w=20)
+print(someReads)
+dev.off()

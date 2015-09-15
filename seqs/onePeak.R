@@ -124,10 +124,14 @@ setnames(onePeak, c("chrom", "first", "cigar", "seq"))
 onePeak$seq.i <- 1:nrow(onePeak)
 table(nchar(onePeak$seq))
 join.list <- list()
+onePeak$last <- NA
 for(seq.i in 1:nrow(onePeak)){
   cat(sprintf("%4d / %4d reads\n", seq.i, nrow(onePeak)))
   one.seq <- onePeak[seq.i, ]
   align.dt <- with(one.seq, align(ref, seq, first, cigar))
+  is.aligned <- which(align.dt$cigar == "M")
+  last.aligned <- rev(is.aligned)[1]
+  onePeak$last[seq.i] <- align.dt$ref.pos[last.aligned]
 
   ggplot()+
     geom_text(aes(ref.pos, "seq", label=exp.base),
@@ -177,7 +181,7 @@ ggplot()+
   facet_grid(. ~ ref.pos, scales="free", space="free")+
   scale_color_discrete("mutation")+
   geom_segment(aes(first-0.5, pos.seq.i,
-                   xend=first+nchar(seq)-0.5, yend=pos.seq.i),
+                   xend=last+0.5, yend=pos.seq.i),
                data=show.reads)+
   geom_text(aes(ref.pos, pos.seq.i,
                 color=ifelse(read.base==ref.base, "hg19", "SNP"),
@@ -185,7 +189,7 @@ ggplot()+
             data=mutated.others)
 
 show.reads[, chromStart := first-1]
-show.reads[, chromEnd := chromStart+nchar(seq)]
+show.reads[, chromEnd := last]
 clustered <- clusterPeaks(show.reads)
 by.cluster <- split(clustered, clustered$cluster)
 cluster.name <- "7"
@@ -194,7 +198,6 @@ for(cluster.name in names(by.cluster)){
   one.cluster <- by.cluster[[cluster.name]]
   ##cat(cluster.name, "\n");print(table(one.cluster$ref.pos))
   cluster.seqs <- onePeak[unique(one.cluster$seq.i), ]
-  cluster.seqs[, last := first + nchar(seq)]
   cluster.seqs$y <- cluster.seqs[, disjointBins(IRanges(first, last))]
   show.seqs.by.cluster[[cluster.name]] <-
     data.table(cluster.name, cluster.seqs)

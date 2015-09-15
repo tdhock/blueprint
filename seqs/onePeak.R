@@ -147,40 +147,62 @@ setkey(join, ref.pos)
 mutated <- join[ref.base != read.base, ]
 others <- join[ref.pos %in% mutated$ref.pos, ]
 by.pos <- split(others, others$ref.pos)
-mutated.props <- sort(sapply(by.pos, with, mean(read.base != ref.base)))
+
+prop.mutated <- sapply(by.pos, with, mean(read.base != ref.base))
+props <-
+  data.table(ref.pos=as.integer(names(prop.mutated)),
+             prop.mutated,
+             fake.pos=seq_along(prop.mutated))
 
 mutated.others.list <- list()
 show.reads.list <- list()
-for(ref.pos in names(mutated.props)){
+for(fake.pos in seq_along(prop.mutated)){
+  ref.pos <- names(prop.mutated)[fake.pos]
   one.pos <- by.pos[[ref.pos]]
   one.pos[, pos.seq.i := seq_along(seq.i)]
-  mutated.others.list[[ref.pos]] <- one.pos
+  mutated.others.list[[ref.pos]] <-
+    data.table(fake.pos, one.pos)
   some.seqs <- onePeak[one.pos$seq.i, ]
   some.seqs$pos.seq.i <- one.pos$pos.seq.i
   show.reads.list[[ref.pos]] <-
-    data.table(ref.pos, some.seqs)
+    data.table(ref.pos=as.integer(ref.pos), fake.pos, some.seqs)
 }
 mutated.others <- do.call(rbind, mutated.others.list)
 show.reads <- do.call(rbind, show.reads.list)
 
 ggplot()+
-  scale_color_discrete("mutation")+
+  geom_tallrect(aes(xmin=ref.pos-10.5, xmax=ref.pos+10.5,
+                    fill=prop.mutated),
+                data=props)+
+  scale_fill_gradient(low="black", high="red", limits=c(0, 1))+
+  scale_color_manual("mutation", values=c(hg19="black", SNP="red"))+
   geom_text(aes(ref.pos, pos.seq.i, label=read.base,
                 color=ifelse(read.base==ref.base, "hg19", "SNP")),
             data=mutated.others)
 
 ggplot()+
-  scale_color_discrete("mutation")+
+  scale_color_manual("mutation", values=c(hg19="black", SNP="red"))+
   geom_text(aes(factor(ref.pos), pos.seq.i, label=read.base,
                 color=ifelse(read.base==ref.base, "hg19", "SNP")),
             data=mutated.others)
 
 ggplot()+
+  geom_tallrect(aes(xmin=fake.pos-0.5, xmax=fake.pos+0.5,
+                    fill=prop.mutated),
+                alpha=0.5,
+                data=props)+
+  scale_fill_gradient(low="black", high="red", limits=c(0, 1))+
+  scale_color_manual("mutation", values=c(hg19="black", SNP="red"))+
+  geom_text(aes(fake.pos, pos.seq.i, label=read.base,
+                color=ifelse(read.base==ref.base, "hg19", "SNP")),
+            data=mutated.others)
+
+ggplot()+
+  scale_color_manual("mutation", values=c(hg19="black", SNP="red"))+
   ggtitle("this plot is misleading since it shows some reads twice")+
   theme_bw()+
   theme(panel.margin=grid::unit(0, "cm"))+
   facet_grid(. ~ ref.pos, scales="free", space="free")+
-  scale_color_discrete("mutation")+
   geom_segment(aes(first-0.5, pos.seq.i,
                    xend=last+0.5, yend=pos.seq.i),
                data=show.reads)+
@@ -195,8 +217,12 @@ clustered <- clusterPeaks(show.reads)
 by.cluster <- split(clustered, clustered$cluster)
 cluster.name <- "7"
 show.seqs.by.cluster <- list()
+setkey(props, ref.pos)
+props.by.cluster <- list()
 for(cluster.name in names(by.cluster)){
   one.cluster <- by.cluster[[cluster.name]]
+  props.by.cluster[[cluster.name]] <-
+    data.table(cluster.name, props[J(unique(one.cluster$ref.pos))])
   ##cat(cluster.name, "\n");print(table(one.cluster$ref.pos))
   cluster.seqs <- onePeak[unique(one.cluster$seq.i), ]
   cluster.seqs$y <- cluster.seqs[, disjointBins(IRanges(first, last))]
@@ -204,10 +230,16 @@ for(cluster.name in names(by.cluster)){
     data.table(cluster.name, cluster.seqs)
 }
 show.seqs <- do.call(rbind, show.seqs.by.cluster)
+clustered.props <- do.call(rbind, props.by.cluster)
 
 ## All reads, even those that do not overlap SNPs.
 mutated.others$global.y <- onePeak[mutated.others$seq.i]$y
 ggplot()+
+  geom_tallrect(aes(xmin=(ref.pos-10.5)/1e3, xmax=(ref.pos+10.5)/1e3,
+                    fill=prop.mutated),
+                alpha=0.5,
+                data=props)+
+  scale_fill_gradient(low="black", high="red", limits=c(0, 1))+
   theme_bw()+
   theme(panel.margin=grid::unit(0, "cm"))+
   ylab("number of aligned reads")+
@@ -226,6 +258,11 @@ setkey(show.seqs, seq.i)
 setkey(mutated.others, seq.i)
 mo.clustered <- mutated.others[show.seqs]
 ggplot()+
+  geom_tallrect(aes(xmin=(ref.pos-1.5)/1e3, xmax=(ref.pos+1.5)/1e3,
+                    fill=prop.mutated),
+                alpha=0.5,
+                data=clustered.props)+
+  scale_fill_gradient(low="black", high="red", limits=c(0, 1))+
   theme_bw()+
   theme(panel.margin=grid::unit(0, "cm"))+
   facet_grid(. ~ cluster.name, space="free", scales="free")+

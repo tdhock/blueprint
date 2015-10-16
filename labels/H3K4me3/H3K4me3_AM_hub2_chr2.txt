@@ -1,0 +1,59 @@
+chr2:36,560,342-36,572,588 noPeaks
+chr2:36,580,656-36,583,082 peakStart neutro
+chr2:36,583,770-36,586,435 peakEnd neutro
+chr2:36,588,994-36,593,745 noPeaks
+
+chr2:38,282,045-38,291,938 noPeaks
+chr2:38,296,661-38,302,730 peakStart neutro
+chr2:38,303,889-38,305,555 peakEnd neutro
+chr2:38,308,203-38,311,545 noPeaks
+
+chr2:45,871,898-45,874,971 noPeaks
+chr2:45,876,308-45,878,300 peakStart neutro
+chr2:45,878,318-45,880,949 peakEnd neutro
+chr2:45,882,869-45,887,643 noPeaks
+
+chr2:63,250,823-63,262,499 noPeaks
+chr2:63,273,006-63,276,128 peakStart neutro
+chr2:63,285,659-63,288,517 peakEnd neutro
+chr2:63,291,102-63,296,515 noPeaks
+
+chr2:65,651,783-65,655,289 noPeaks
+chr2:65,656,842-65,659,492 peakStart neutro
+chr2:65,659,358-65,660,898 peakEnd neutro
+chr2:65,666,595-65,669,292 noPeaks
+
+chr2:86,102,954-86,109,845 noPeaks
+chr2:86,112,897-86,115,912 peakStart neutro
+chr2:86,115,880-86,117,680 peakEnd neutro
+chr2:86,119,022-86,121,271 noPeaks
+
+chr2:109,734,122-109,738,864 noPeaks
+chr2:109,743,266-109,745,379 peakStart neutro
+chr2:109,745,979-109,747,711 peakEnd neutro
+chr2:109,749,898-109,752,394 noPeaks
+
+chr2:111,862,682-111,867,597 noPeaks
+chr2:111,872,629-111,878,378 peakStart neutro
+chr2:111,878,728-111,883,257 peakEnd neutro
+chr2:111,884,002-111,887,822 noPeaks
+
+chr2:112,648,212-112,651,949 noPeaks
+chr2:112,653,634-112,656,429 peakStart neutro
+chr2:112,656,422-112,658,401 peakEnd neutro
+chr2:112,659,766-112,661,924 noPeaks
+
+chr2:121,085,680-121,089,657 noPeaks
+chr2:121,100,248-121,103,286 peakStart neutro
+chr2:121,104,365-121,108,596 peakEnd neutro
+chr2:121,110,941-121,116,901 noPeaks
+
+chr2:129,063,325-129,069,338 noPeaks
+chr2:129,074,345-129,077,025 peakStart neutro
+chr2:129,076,719-129,081,731 peakEnd neutro
+chr2:129,081,241-129,083,598 noPeaks
+
+chr2:132,987,779-132,999,817 noPeaks
+chr2:133,011,755-133,017,502 peakStart neutro input
+chr2:133,031,571-133,038,704 peakEnd neutro input
+chr2:133,053,725-133,070,013 noPeaks

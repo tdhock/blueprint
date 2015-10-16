@@ -1,0 +1,59 @@
+chr2:51,234,103-51,236,560 noPeaks
+chr2:51,239,230-51,240,251 peakStart mono neutro
+chr2:51,240,917-51,242,563 peakEnd mono neutro
+chr2:51,242,925-51,243,884 noPeaks
+
+chr2:61,098,334-61,103,124 noPeaks
+chr2:61,106,063-61,110,945 peakStart mono neutro TC
+chr2:61,114,039-61,117,186 peakEnd mono neutro TC
+chr2:61,121,686-61,127,045 noPeaks
+
+chr2:61,398,928-61,400,558 noPeaks
+chr2:61,402,526-61,404,978 peakStart mono neutro TC
+chr2:61,407,001-61,410,826 peakEnd mono neutro TC
+chr2:61,414,073-61,417,725 noPeaks
+
+chr2:62,106,903-62,110,095 noPeaks
+chr2:62,111,620-62,114,394 peakStart mono neutro TC
+chr2:62,114,400-62,116,947 peakEnd mono neutro TC
+chr2:62,119,757-62,124,176 noPeaks
+
+chr2:62,255,353-62,260,245 noPeaks
+chr2:62,263,384-62,266,654 peakStart mono neutro TC
+chr2:62,266,700-62,268,727 peakEnd mono neutro TC
+chr2:62,270,431-62,275,578 noPeaks
+
+chr2:62,521,528-62,525,793 noPeaks
+chr2:62,527,003-62,531,246 peakStart mono neutro TC
+chr2:62,533,733-62,542,647 peakEnd mono neutro TC
+chr2:62,559,076-62,571,488 noPeaks
+
+chr2:63,792,415-63,805,397 noPeaks
+chr2:63,808,150-63,816,826 peakStart mono neutro TC
+chr2:63,818,297-63,824,199 peakEnd mono neutro TC
+chr2:63,830,100-63,839,821 noPeaks
+
+chr2:118,562,855-118,567,649 noPeaks
+chr2:118,569,429-118,572,785 peakStart mono neutro TC
+chr2:118,572,800-118,576,354 peakEnd mono neutro TC
+chr2:118,579,414-118,587,217 noPeaks
+
+chr2:127,405,809-127,409,350 noPeaks
+chr2:127,409,877-127,415,607 peakStart mono neutro TC
+chr2:127,419,464-127,423,691 peakEnd mono neutro TC
+chr2:127,428,222-127,432,551 noPeaks
+
+chr2:129,043,907-129,053,389 noPeaks
+chr2:129,068,300-129,075,392 peakStart mono neutro TC
+chr2:129,079,322-129,084,175 peakEnd mono neutro TC
+chr2:129,084,577-129,086,203 noPeaks
+
+chr2:129,404,351-129,407,447 noPeaks
+chr2:129,410,296-129,412,637 peakStart mono neutro
+chr2:129,413,190-129,414,010 peakEnd mono neutro
+chr2:129,414,609-129,416,013 noPeaks
+
+chr2:130,920,622-130,927,178 noPeaks
+chr2:130,936,967-130,940,201 peakStart mono neutro TC
+chr2:130,940,964-130,943,280 peakEnd mono neutro TC
+chr2:130,946,831-130,951,237 noPeaks

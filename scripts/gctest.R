@@ -46,11 +46,14 @@ for(bedGraph.file.i in seq_along(bedGraph.file.vec)){
               bedGraph.file))
   file.coverage <- fread(bedGraph.file)
   setnames(file.coverage, c("chrom", "chromStart", "chromEnd", "count"))
+  max.count <- max(file.coverage$count)
+  file.coverage[, norm := count/max.count]
   file.bins <-
     binSum(file.coverage,
            bin.chromStart=32400000L,
            bin.size=100L,
            n.bins=255L)
+  file.bins$norm <- file.bins$mean / max.count
   match.row <- data.frame(match.df[bedGraph.file.i, ])
   coverage.list[[bedGraph.file]] <- data.table(match.row, file.coverage)
   coverageBins.list[[bedGraph.file]] <- data.table(match.row, file.bins)

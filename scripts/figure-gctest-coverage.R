@@ -62,6 +62,22 @@ png("figure-gcpred-coverage.png", width=14, height=10, units="in", res=200)
 print(pred.fig)
 dev.off()
 
+load("../results/H3K27ac/PeakSegJoint.predictions.RData")
+all.peaks.dt <- data.table(all.peaks.df)
+setkey(all.peaks.dt, sample.id)
+type.code <- c(
+  Mono="CD14-positive_CD16-negative_classical_monocyte",
+  GR="mature_neutrophil")
+train.sample.ids <- unique(gctest[, {
+  paste(person, center, type.code[paste(cellType)], sep="_")
+}])
+not.input <- all.peaks.dt[train.sample.ids][sample.group != "Input", ]
+more.NCMLS <- not.input[, {
+  list(McGill=sum(grepl("McGill", sample.id)),
+       NCMLS=sum(grepl("NCMLS", sample.id)))
+}, by=peak.name][McGill < NCMLS, ]
+stop("TODO train model using regions around more.NCMLS")
+
 bin.color <- "#E41A1C"
 fig.cov <- 
   ggplot()+

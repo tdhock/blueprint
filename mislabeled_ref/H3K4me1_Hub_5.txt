@@ -1,0 +1,9 @@
+S00GWD | mature_neutrophil | WTSI | H3K4me1 looks like H3K4me3
+S00HE8 | mature_neutrophil | WTSI | H3K4me1 looks like H3K4me3
+S00J3M | mature_neutrophil | WTSI | H3K4me1 looks like H3K27me3
+S00HUD | mature_neutrophil | WTSI | H3K4me1 looks like H3K27me3
+S00HVB | mature_neutrophil | WTSI | H3K4me1 looks like H3K27me3
+S00GEC | mature_neutrophil | WTSI | H3K4me1 looks like H3K27ac
+S00GSL | mature_neutrophil | WTSI | H3K4me1 looks like Input
+S00G7Q | mature_neutrophil | WTSI | H3K4me1 looks like Input
+

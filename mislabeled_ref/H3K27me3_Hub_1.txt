@@ -1,0 +1,12 @@
+S00GBI | mature_neutrophil | WTSI | H3K27me3 looks like H3K4me1
+S00G9M | mature_neutrophil | WTSI | H3K27me3 looks like H3K4me1
+S00DP2 | mature_neutrophil | WTSI | H3K27me3 looks like H3K4me1
+S00DKC | mature_neutrophil | WTSI | H3K27me3 looks like H3K4me1
+S00D9Y | mature_neutrophil | WTSI | H3K27me3 looks like H3K4me1
+S00GEC | mature_neutrophil | WTSI | H3K27me3 looks like H3K27ac
+S00F9Q | mature_neutrophil | WTSI | H3K27me3 looks like H3K27ac
+S00E9U | mature_neutrophil | WTSI | H3K27me3 looks like H3K27ac
+S00DQ0 | mature_neutrophil | WTSI | H3K27me3 looks like H3K27ac
+S00FUL | mature_neutrophil | WTSI | H3K27me3 looks like H3K4me3
+S00FPV | mature_neutrophil | WTSI | H3K27me3 looks like H3K4me3
+S00FK4 | mature_neutrophil | WTSI | H3K27me3 looks like H3K4me3

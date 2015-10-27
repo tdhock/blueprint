@@ -1,0 +1,6 @@
+These files contain one line for each track that was obviously not
+like the others of the same experiment, by visual inspection. First I
+loaded the [[http://epigenomesportal.ca/edcc/cgi-bin/hub.cgi?id%3D2685][7 reference BluePrint samples for each experiment from the IHEC portal]] 
+onto the genome browser, and then I loaded each of the hubs one by one, 
+writing a file for each hub inspected and a line for each profile that was
+obviously abnormal.

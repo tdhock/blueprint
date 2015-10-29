@@ -1,0 +1,59 @@
+works_with_R("3.2.2",
+             "tdhock/namedCapture@a31a38be12d4dad4aec6257a47c0e2307679589c",
+             data.table="1.9.6")
+
+load("hubs.nodup.RData")
+
+pattern <- paste0(
+  "(?<private>.*?)",
+  " [|] *",
+  "(?<long_type>.*?)",
+  " [|] ",
+  "(?<where>.*?)",
+  " [|] ",
+  "(?<experiment>[^ ]+)",
+  " ",
+  "(?<problem>.*)")
+
+long2short <- c(
+  mature_neutrophil="GR",
+  Tcell="nTC",
+  monocyte="Mono",
+  "CD14-positive_CD16-negative_classical_monocyte"="Mono"
+  )
+
+samples.by.hub <- split(hubs.nodup, hubs.nodup$hub)
+bad.txt.vec <- Sys.glob("../mislabeled_ref/*.txt")
+mislabeled.ref.list <- list()
+for(bad.txt in bad.txt.vec){
+  bad.lines <- readLines(bad.txt)
+  hub <- sub(".txt", "", basename(bad.txt))
+  has.problems <- any(grepl("[|]", bad.lines))
+  mislabeled.ref.list[[hub]] <- if(has.problems){
+    hub.dt <- samples.by.hub[[hub]]
+    bad.mat <- str_match_named(bad.lines[bad.lines!=""], pattern)
+    bad.dt <- data.table(bad.mat)
+    stopifnot(bad.dt$long_type %in% names(long2short))
+    bad.dt[, cell.type := long2short[paste(long_type)]]
+    setkey(hub.dt, private, cell.type, where, experiment)
+    setkey(bad.dt, private, cell.type, where, experiment)
+    merge.dt <- hub.dt[bad.dt]
+    stopifnot(nrow(merge.dt) == nrow(bad.dt))
+    stopifnot(!is.na(merge.dt))
+    merge.dt
+  }else{
+    data.table()
+  }
+}
+
+is.missing <- ! names(samples.by.hub) %in% names(mislabeled.ref.list)
+if(any(is.missing)){
+  print(names(samples.by.hub)[is.missing])
+}
+
+mislabeled <- data.frame(do.call(rbind, mislabeled.ref.list))
+
+with(mislabeled, table(cell.type, where, experiment))
+
+write.csv(mislabeled, "mislabeled.csv")
+save(mislabeled, file="mislabeled.RData")

@@ -1,0 +1,4 @@
+S00GSL |  mature_neutrophil | WTSI | H3K27me3 looks like H3K27ac
+S00GWD |  mature_neutrophil | WTSI | H3K27me3 looks like H3K27ac
+S00HE8 |  mature_neutrophil | WTSI | H3K27me3 looks like H3K27ac
+S00J3M |  mature_neutrophil | WTSI | H3K27me3 no signal

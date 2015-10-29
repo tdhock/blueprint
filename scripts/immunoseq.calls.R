@@ -85,4 +85,11 @@ for(variant.type in names(immunoseq)){
   immunoseq.calls[[variant.type]] <- nAlt.mat
 }
 
+## TDH: Also I noticed there are a few missing genotypes (NA) in the
+## variant x sample matrix. Does that mean there aren't enough reads
+## to call a variant in that sample at that region of the genome?
+
+## AM: Its based on my cut-off (dp>=10, gq>=40, MQ>=50). The one that
+## have NA do not pass the cut-off.
+
 save(immunoseq.calls, file="immunoseq.calls.RData")

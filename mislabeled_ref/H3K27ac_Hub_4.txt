@@ -1,0 +1,5 @@
+S00FVJ |  mature_neutrophil | WTSI | H3K27ac looks like H3K27me3
+S00G5U |  mature_neutrophil | WTSI | H3K27ac looks like H3K27me3
+S00D9Y |  mature_neutrophil | WTSI | H3K27ac looks like H3K27me1
+S00DKC |  mature_neutrophil | WTSI | H3K27ac looks like H3K27me1
+S00DP2 |  mature_neutrophil | WTSI | H3K27ac looks like H3K27me1

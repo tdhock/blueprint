@@ -152,6 +152,8 @@ for(cell.type in type.vec[type.vec != "Input"]){
   png(png.name, width=1000, h=height.pixels, units="px")
   print(gg)
   dev.off()
-
+  thumb.name <- file.path(out.dir, paste0(cell.type, "-thumb.png"))
+  cmd <- sprintf("convert %s -resize 230 %s", png.name, thumb.name)
+  system(cmd)
 }
 

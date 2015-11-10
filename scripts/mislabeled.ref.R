@@ -55,5 +55,32 @@ mislabeled <- data.frame(do.call(rbind, mislabeled.ref.list))
 
 with(mislabeled, table(cell.type, where, experiment))
 
+mislabeled$looks.like <- with(mislabeled, {
+  ifelse(grepl("looks like", problem),
+         sub("looks like ", "", problem),
+         "Input")
+})
+
+with(mislabeled, table(problem, looks.like))
+rownames(mislabeled) <- mislabeled$bigwig
+
+hubs.nodup[, looks.like := mislabeled[paste(bigwig), "looks.like"]]
+hubs.nodup[is.na(looks.like), looks.like := "OK"]
+hubs.nodup[, url := sub(".*blueprint",
+                   "http://hubs.hpc.mcgill.ca/~thocking", bigwig)]
+
+hub.prefix <- "http://hubs.hpc.mcgill.ca/~thocking/hubs_nodup"
+labeled.bigwigs <- hubs.nodup[, {
+  data.frame(donor=private, cell.type, center=where,
+             experiment, looks.like,
+             hub=sprintf("%s/%s/hub.txt", hub.prefix, hub),
+             url)
+}]
+table(labeled.bigwigs$looks.like)
+with(labeled.bigwigs, table(experiment, looks.like))
+stopifnot(sum(labeled.bigwigs$looks.like != "OK") == nrow(mislabeled))
+write.csv(labeled.bigwigs, "labeled.bigwigs.csv")
+save(labeled.bigwigs, file="labeled.bigwigs.RData")
+
 write.csv(mislabeled, "mislabeled.csv")
 save(mislabeled, file="mislabeled.RData")

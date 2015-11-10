@@ -87,9 +87,11 @@ for(cellType in c("mono", "neutro")){
                  down.alt=mean(variant.vec[!is.peak], na.rm=TRUE))
   }
   pval.dt <- do.call(rbind, pval.dt.list)
-  pval.dt[order(p.value), ][1:20,]
-  pval.dt[down==1,][order(p.value),][1:10,]
-  pval.dt[down==2,][order(p.value),][1:10,]
+  pval.dt[order(p.value), ][1:100,]
+  pval.dt[down==1 & p.value < 0.99, ]
+  pval.dt[up==1 & p.value < 0.99, ]
+  pval.dt[up==2 & p.value < 0.99, ]
+  pval.dt[, diff.alt := abs(up.alt-down.alt)]
   H3K27ac.immunoseq[[cellType]] <-
     list(counts.by.variant=counts.by.variant,
          p.values=pval.dt)

@@ -157,7 +157,7 @@ for(peak.i in seq_along(peakID.vec)){
 #PBS -e ", peak.dir, ".err
 #PBS -V                                        
 #PBS -N ", peakID, "
-bash ", PlotPeak.R, " ", predictions.RData, " ", peakID, "
+Rscript ", PlotPeak.R, " ", predictions.RData, " ", peakID, "
 Rscript ~/bin/PlotISeq.R ", peaksPlot.RData, "\n")
   script.file <- paste0(peak.dir, ".sh")
   script.dir <- dirname(script.file)

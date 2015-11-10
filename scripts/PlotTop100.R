@@ -1,5 +1,17 @@
-works_with_R("3.2.2", data.table="1.9.6",
-             "tdhock/namedCapture@a31a38be12d4dad4aec6257a47c0e2307679589c")
+works_with_R("3.2.2", data.table="1.9.6")
+
+library(namedCapture)
+library(xtable)
+
+getenv.or <- function(env.var, default){
+  env.value <- Sys.getenv(env.var)
+  if(env.value == ""){
+    default
+  }else{
+    env.value
+  }
+}
+qsub <- getenv.or("QSUB", "qsub")
 
 argv <- "../results/H3K27ac/PeakSegJoint.predictions.RData"
 

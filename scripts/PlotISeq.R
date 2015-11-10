@@ -18,15 +18,17 @@ immunoseq.RData <- normalizePath(if(length(argv) == 2){
 })
 load(immunoseq.RData)
 
-peaksPlot$coverage[, donor := sub("_.*", "", sample.id)]
-peaksPlot$coverage[, cell.type := sub("[0-9]*$", "", sample.group)]
+coverage.dt <- data.table(peaksPlot$coverage)
+coverage.dt[, donor := sub("_.*", "", sample.id)]
+coverage.dt[, cell.type := sub("[0-9]*$", "", sample.group)]
 
-peaksPlot$peaks[, donor := sub("_.*", "", sample.id)]
-peaksPlot$peaks[, cell.type := sub("[0-9]*$", "", sample.group)]
+peaks.dt <- data.table(peaksPlot$peaks)
+peaks.dt[, donor := sub("_.*", "", sample.id)]
+peaks.dt[, cell.type := sub("[0-9]*$", "", sample.group)]
 
-plot.donor.vec <- unique(peaksPlot$coverage$donor)
+plot.donor.vec <- unique(coverage.dt$donor)
 
-chunk <- peaksPlot$peaks[1,]
+chunk <- peaks.dt[1,]
 setkey(chunk, chrom, zoomStart, zoomEnd)
 
 genotype.code <- c(
@@ -87,12 +89,12 @@ variants <- do.call(rbind, variants.by.pos)
 variants.RData <- sub("peaksPlot", "variants", peaksPlot.RData)
 save(variants, file=variants.RData)
 
-type.vec <- unique(peaksPlot$coverage$cell.type)
-setkey(peaksPlot$coverage, cell.type)
-setkey(peaksPlot$peaks, cell.type)
+type.vec <- unique(coverage.dt$cell.type)
+setkey(coverage.dt, cell.type)
+setkey(peaks.dt, cell.type)
 for(cell.type in type.vec[type.vec != "Input"]){
-  type.coverage <- peaksPlot$coverage[cell.type]
-  type.peaks <- peaksPlot$peaks[cell.type]
+  type.coverage <- coverage.dt[cell.type]
+  type.peaks <- peaks.dt[cell.type]
   donors.with.coverage <- unique(type.coverage$donor)
   type.variants <- variants[donor %in% donors.with.coverage,]
   n.profiles <- length(donors.with.coverage)

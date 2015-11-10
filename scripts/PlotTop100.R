@@ -125,7 +125,7 @@ for(cellType in non.Input.vec){
 }
 top100 <- do.call(rbind, top100.by.type)
 
-top100.sorted <- top100[order(p.value),]
+top100.sorted <- top100[order(min.p.value),]
 xt <- xtable(top100.sorted, digits=3)
 data.dir <- dirname(predictions.RData)
 out.dir <- file.path(data.dir, "PeakSegJoint-predictions-plots")

@@ -1,4 +1,4 @@
-H3K27ac.immunoseq.RData: immunoseq.calls.R
+H3K27ac.immunoseq.RData: H3K27ac.immunoseq.R immunoseq.calls.RData
 	R --no-save < $<
 immunoseq.calls.RData: immunoseq.calls.R
 	R --no-save < $<

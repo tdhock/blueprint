@@ -1,9 +1,17 @@
 works_with_R("3.2.2", ggdendro="0.1.14", data.table="1.9.6",
              flexclust="1.3.4",
-             "tdhock/animint@d1c3deb15d52f613f7d3a35a57d1c94a079f0352")
+             "tdhock/animint@4257e8cf76eb5021a98010b6629b779a4f383b24")
 
 objs <- load("PeakSegJoint.diffs.RData")
 load("PeakSegJoint.predictions.RData")
+load("../../scripts/mislabeled.RData")
+bad.H3K27ac <- subset(mislabeled, experiment=="H3K27ac")
+type.code <-
+  c(Mono="CD14-positive_CD16-negative_classical_monocyte",
+    GR="mature_neutrophil")
+rownames(bad.H3K27ac) <- with(bad.H3K27ac, {
+  paste(private, where, type.code[paste(cell.type)], sep="_")
+})
 
 method.vec <- c("ward.D", "ward.D2", "single", "complete", "average",
                 "mcquitty", "median", "centroid")
@@ -13,6 +21,13 @@ labs.list <- list()
 best.list <- list()
 for(method in method.vec){
   hc <- hclust(PeakSegJoint.diffs, method=method)
+  d.data <- dendro_data(hc)
+  method.labs <- d.data$labels
+  method.labs$type <- get.type(method.labs$label)
+  label.vec <- sub(".*/", "", method.labs$label)
+  prob.or.NA <-
+    ifelse(method.labs$type=="Input", NA, bad.H3K27ac[label.vec, "problem"])
+  method.labs$problem <- ifelse(is.na(prob.or.NA), "OK", "abnormal")
   best.list[[method]] <- tryCatch({
     guess.mat <- cutree(hc, h=hc$height)
     true.str <- factor(get.type(rownames(guess.mat)))
@@ -27,14 +42,12 @@ for(method in method.vec){
   }, error=function(e){
     data.table(method, ARI=NA, peaks=NA)
   })
-  d.data <- dendro_data(hc)
   segs.list[[method]] <- data.table(method, d.data$segments)
-  labs.list[[method]] <- data.table(method, d.data$labels)
+  labs.list[[method]] <- data.table(method, method.labs)
 }
 best <- do.call(rbind, best.list)
 segs <- do.call(rbind, segs.list)
 labs <- do.call(rbind, labs.list)
-labs[, type := get.type(label)]
 
 (all.trees <-
   ggplot()+
@@ -55,10 +68,12 @@ labs[, type := get.type(label)]
                color="grey50",
                size=1,
                data=segs)+
+  scale_color_manual(values=c(OK="white", abnormal="black"))+
   geom_point(aes(x, y, label=label,
                  clickSelects=label,
-                 color=type),
-             pch=1,
+                 color=problem,
+                 fill=type),
+             pch=21,
              angle=90,
              hjust=1,
              alpha=0.75,

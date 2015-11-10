@@ -1,14 +1,22 @@
-works_with_R("3.2.2",
-             data.table="1.9.6",
-             "tdhock/namedCapture@a31a38be12d4dad4aec6257a47c0e2307679589c")
+library(data.table)
+library(namedCapture)
+library(ggplot2)
 
 argv <- "~/PeakSegJoint-predictions-plots/chr5:156569171-156570800/peaksPlot.RData"
+
+argv <- commandArgs(trailingOnly=TRUE)
 
 peaksPlot.RData <- normalizePath(argv[1])
 out.dir <- dirname(peaksPlot.RData)
 
 load(peaksPlot.RData)
-load("immunoseq.RData")
+
+immunoseq.RData <- normalizePath(if(length(argv) == 2){
+  argv[2]
+}else{
+  "~/immunoseq.RData"
+})
+load(immunoseq.RData)
 
 peaksPlot$coverage[, donor := sub("_.*", "", sample.id)]
 peaksPlot$coverage[, cell.type := sub("[0-9]*$", "", sample.group)]
@@ -71,7 +79,7 @@ for(variant.type in c("rare")){
     variants.by.pos[[one.variant$chr_pos]] <-
       data.table(chrom=one.variant$chrom,
                  position=one.variant$POS,
-                 one.variant.dt)
+                 one.variant.dt[!is.na(allele1code), ])
   }
 }
 variants <- do.call(rbind, variants.by.pos)
@@ -130,17 +138,17 @@ for(cell.type in type.vec[type.vec != "Input"]){
                    size=4,
                    color="deepskyblue")+
       geom_text(aes(position/1e3, 0, label=allele1, color=allele1code),
-                data=type.variants[!is.na(allele1code),],
+                data=type.variants,
                 hjust=1,
                 vjust=0)+
       geom_text(aes(position/1e3, 0, label=allele2, color=allele2code),
-                data=type.variants[!is.na(allele2code),],
+                data=type.variants,
                 hjust=0,
                 vjust=0)+
       scale_color_manual("allele", values=c(REF="black", ALT="red"))
   height.pixels <- (n.profiles+1)*35
   png.name <- file.path(out.dir, paste0(cell.type, ".png"))
-  print(png.name)
+  cat(png.name, "\n", sep="")
   png(png.name, width=1000, h=height.pixels, units="px")
   print(gg)
   dev.off()

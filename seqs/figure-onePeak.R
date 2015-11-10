@@ -1,11 +1,13 @@
 works_with_R("3.2.2",
+             Rsamtools="1.20.4",
+             GenomicAlignments="1.2.1",
              IRanges="2.2.7",
              Gviz="1.13.7",
-             data.table="1.9.5",
+             data.table="1.9.6",
              ggplot2="1.0.1",
              testthat="0.10.0",
-             "tdhock/animint@a35adc6315ebac1350d3376df2a1a4eb6004c083",
-             "tdhock/PeakSegJoint@4941036ace97855210e81acf2492592ec3b1b32c")
+             "tdhock/animint@4257e8cf76eb5021a98010b6629b779a4f383b24",
+             "tdhock/PeakSegJoint@e51c877e3bb0b5d90efe9a2fb5201e3c102d2543")
 
 st <- c(2000000, 2070000, 2100000, 2160000)
 ed <- c(2050000, 2130000, 2150000, 2170000)
@@ -133,13 +135,11 @@ for(seq.i in 1:nrow(onePeak)){
   is.aligned <- which(align.dt$cigar == "M")
   last.aligned <- rev(is.aligned)[1]
   onePeak$last[seq.i] <- align.dt$ref.pos[last.aligned]
-
   ggplot()+
     geom_text(aes(ref.pos, "seq", label=exp.base),
               data=align.dt)+
     geom_text(aes(ref.pos, "ref", label=ref.base),
               data=ref)
-
   join.list[[seq.i]] <- data.table(seq.i, align.dt)
 }
 onePeak[, y := disjointBins(IRanges(first, last))]
